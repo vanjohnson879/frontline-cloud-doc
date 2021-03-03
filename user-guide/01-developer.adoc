@@ -138,8 +138,6 @@ libraryDependencies += "io.gatling.highcharts" % "gatling-charts-highcharts" % g
 libraryDependencies += "io.gatling"            % "gatling-test-framework"    % gatlingVersion % "test"
 ----
 
-WARNING: *Don’t forget to replace the UUID with the one you were given.*
-
 WARNING: We only support sbt 1+, not sbt 0.13.
 
 WARNING: If you use the 'it' config, you have to use a custom build command as the defauit one is for the 'test' config:
@@ -197,8 +195,6 @@ gatling {
     toolVersion = '{gatlingVersion}'
 }
 ----
-
-WARNING: *Don’t forget to replace the UUID with the one you were given.*
 
 You can run `gradle frontLineJar` in your terminal and check you get a jar containing all the dependencies of the simulation.
 
