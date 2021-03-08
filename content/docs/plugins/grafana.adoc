@@ -1,16 +1,24 @@
 ---
-title: Grafana Datasource
-weight: 11
-description: User Guide
+title: "Grafana Datasource"
+description: ""
+lead: ""
+date: 2021-03-08T13:50:08+01:00
+lastmod: 2021-03-08T13:50:08+01:00
+draft: false
+images: []
+menu:
+  docs:
+    parent: "plugins"
+weight: 200
 ---
 
-== Grafana FrontLine Datasource
+:toc:
 
-=== Requirements
+== Requirements
 
 Download and install link:http://grafana.org/download/[Grafana].
 
-=== Grafana datasource installation
+== Grafana datasource installation
 
 The FrontLine datasource for Grafana is packaged as a zip bundle that you can found at this URL:
 
@@ -22,7 +30,7 @@ You can install it using the grafana-cli:
 
 `grafana-cli --pluginUrl GRAFANA_DATASOURCE_BUNDLE_URL plugins install frontline`
 
-=== Adding the datasource
+== Adding the datasource
 
 - In the Grafana side menu you will find the `Data Sources` link under `Configuration` (link name may depend on the grafana version).
 
@@ -39,14 +47,14 @@ TIP: NOTE: If this link is missing in the side menu, it means that your current 
 |Name         |The datasource name.
 |Default      |Should be checked if you want that datasource to be selected by default in new panels
 |URL          |URL of your FrontLine server. Default port is 10542. Don't forget the http(s)://
-|Access       |Server = access via Grafana backend, Browser = access directly from browser.
+|Access       |Server  access via Grafana backend, Browser  access directly from browser.
 |Auth         |FrontLine datasource ignore these fields.
 |API Token    |Token generated through the FrontLine dashboard.
 |=======================
 
 image::grafana-datasource/images/configure-datasource.png[pdfheight=20%, align=center]
 
-=== Templating
+== Templating
 
 TIP: Our team provides some dashboards that you can import if you don't want to bother about setting up all the charts and these template variables.
 
@@ -74,7 +82,7 @@ image::grafana-datasource/images/templating.png[align=center]
 image::grafana-datasource/images/dashboard.png[]
 
 
-=== FrontLine Metrics
+== FrontLine Metrics
 
 TIP: You can get the list of metrics and test the results via FrontLine's Swagger UI, available through `Documentation` and `FrontLine API Documentation` in the FrontLine dashboard.
 
@@ -156,7 +164,7 @@ FrontLine offers a large amount of metrics:
 
 NOTE: <Percentiles> are: min, p25, p50, p75, p80, p85, p90, p95, p99, p999, p9999, max, mean and pAll. (pAll is useful if you want to display in the same graph).
 
-==== Metric Requirements
+=== Metric Requirements
 
 [cols="3,1,1,1,1,1,1,1,1",options="header,footer"]
 |=======================

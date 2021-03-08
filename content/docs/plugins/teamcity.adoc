@@ -1,19 +1,26 @@
 ---
-title: Teamcity Plugin
-weight: 14
-description: User Guide
+title: "Teamcity Plugin"
+description: ""
+lead: ""
+date: 2021-03-08T13:50:20+01:00
+lastmod: 2021-03-08T13:50:20+01:00
+draft: false
+images: []
+menu:
+  docs:
+    parent: "plugins"
+weight: 230
 ---
 
-== TeamCity Plugin
+:toc:
 
-
-=== Purpose of this plugin
+== Purpose of this plugin
 
 This plugin allows you to start a Gatling FrontLine simulation directly from your TeamCity platform. This plugin links a TeamCity plan with one and only one Gatling FrontLine simulation. +
 
 This plugin doesn't create a new Gatling FrontLine simulation, you have to create it manually before.
 
-=== Installation
+== Installation
 
 To download the plugin, you need to get the zip file located at:
 
@@ -25,7 +32,7 @@ You need to be connected as an administrator of your TeamCity application to ins
 
 image::teamcity-plugin/images/teamCityUploadPlugin.png[]
 
-=== Configuration
+== Configuration
 
 The plugin needs some global configuration. Go __Administration__, then __FrontLine__.
 
@@ -34,13 +41,13 @@ The __API Token__ will allow TeamCity to authenticate to Gatling FrontLine, with
 
 image::teamcity-plugin/images/teamCityAdministration.png[]
 
-=== Plan set-up
+== Plan set-up
 
 Add a new build step called __FrontLine Launcher__. Choose in the Simulation list the simulation you want to monitor. You need to configure the global properties of the plugin, and create at least a simulation on your FrontLine to do this step.
 
 image::teamcity-plugin/images/teamCityConfiguration.png[]
 
-==== JUnit reporting
+=== JUnit reporting
 
 You can display the results of the Gatling FrontLine assertions as a JUnit Test.
 
@@ -50,7 +57,7 @@ Add a new build feature called __XML report processing__. Choose __Ant JUnit__ a
 image::teamcity-plugin/images/teamCityJunit.png[]
 
 
-=== Usage
+== Usage
 
 A new Gatling FrontLine simulation will be started every time the job is run. Check the Console Log to check the advancement of the simulation. If the simulation ran successfully, it will looks like the following:
 
