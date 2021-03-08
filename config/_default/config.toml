@@ -42,6 +42,9 @@ noUgly = true
 rel  = "sitemap"
 
 [markup]
+  [markup.asciidocExt]
+    extensions = ["asciidoctor-diagram", "asciidoctor-html5s"]
+    preserveTOC = false
   [markup.goldmark]
     [markup.goldmark.extensions]
       linkify = false
