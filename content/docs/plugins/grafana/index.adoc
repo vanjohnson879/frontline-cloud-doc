@@ -34,7 +34,7 @@ You can install it using the grafana-cli:
 
 - In the Grafana side menu you will find the `Data Sources` link under `Configuration` (link name may depend on the grafana version).
 
-image::grafana-datasource/images/datasource-menu.png[align=center]
+{{< img src="datasource-menu.png" alt="" >}}
 
 TIP: NOTE: If this link is missing in the side menu, it means that your current user does not have the `Admin` role for the current organization.
 
@@ -52,7 +52,7 @@ TIP: NOTE: If this link is missing in the side menu, it means that your current 
 |API Token    |Token generated through the FrontLine dashboard.
 |=======================
 
-image::grafana-datasource/images/configure-datasource.png[pdfheight=20%, align=center]
+{{< img src="configure-datasource.png" alt="pdfheight=20%" >}}
 
 == Templating
 
@@ -69,18 +69,17 @@ To create a variable on your dashboard, Click the settings button on the top rig
 
 For example, to create the simulation template variable and use them in your graphs:
 
-image::grafana-datasource/images/templating-edit.png[align=center]
+{{< img src="templating-edit.png" alt="" >}}
 
 You will need for the scopes to use `Custom` type as shown below :
 
-image::grafana-datasource/images/templating-edit-custom.png[align=center]
+{{< img src="templating-edit-custom.png" alt="" >}}
 
 At the end, your template variables should be something like:
 
-image::grafana-datasource/images/templating.png[align=center]
+{{< img src="templating.png" alt="" >}}
 
-image::grafana-datasource/images/dashboard.png[]
-
+{{< img src="dashboard.png" alt="" >}}
 
 == FrontLine Metrics
 

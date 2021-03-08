@@ -30,8 +30,7 @@ https://downloads.gatling.io/releases/frontline-bamboo-plugin/REPLACE_WITH_LATES
 
 You need to be connected as an administrator of your Bamboo application to install it. Go *Bamboo Administration*, *Manage Apps*, *Upload app*, and choose the jar file.
 
-image::bamboo-plugin/images/bambooInstallation.png[Installation,align=center]
-
+{{< img src="installation.png" alt="Installation" >}}
 
 == Configuration
 
@@ -42,8 +41,7 @@ Add two new variables:
 * The first one is named __frontline.address__, and corresponds to the address of your FrontLine API.
 * The second one is named __frontline.apiTokenPassword__, and corresponds to the token needed to authenticate to Gatling FrontLine. To fetch it, refer to the section *Managing API Tokens* in the FrontLine User Guide.
 
-image::bamboo-plugin/images/bambooGlobalVariable.png[]
-
+{{< img src="global-variable.png" alt="Global variable" >}}
 
 == Job set-up
 
@@ -51,8 +49,7 @@ image::bamboo-plugin/images/bambooGlobalVariable.png[]
 
 Add a new build task called __Gatling FrontLine__. Choose in the FrontLine Simulation list the simulation you want to use.
 
-image::bamboo-plugin/images/bambooConfigurationTask.png[]
-
+{{< img src="configuration-task.png" alt="Task configuration" >}}
 
 === JUnit reporting
 
@@ -65,17 +62,16 @@ CAUTION: Be sure to place this task always after the GatlingFrontLine task, or i
 
 CAUTION: If you don't have any assertions in your Gatling simulation, the JUnit task will fail.
 
-image::bamboo-plugin/images/bambooConfigurationJUnit.png[]
-
+{{< img src="configuration-junit.png" alt="JUnit configuration" >}}
 
 == Usage
 
 A new Gatling FrontLine simulation will be started every time the job is run. Check the logs to check the simulation progress. If the simulation ran successfully, it will look like the following:
 
-image::bamboo-plugin/images/bambooConsoleOutput.png[]
+{{< img src="console-output.png" alt="Console output" >}}
 
 If the Gatling FrontLine deployment fails (i.e. because of a shortage of available hosts), the plugin will retry 3 times to redeploy the simulation.
 
 Live metrics will be displayed in the console, and in the build summary.
 
-image::bamboo-plugin/images/bambooResults.png[]
+{{< img src="results.png" alt="Results" >}}
