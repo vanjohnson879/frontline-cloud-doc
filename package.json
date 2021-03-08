@@ -1,6 +1,6 @@
 {
   "name": "frontline-cloud-doc",
-  "version": "1.0.0-SNAPSHO",
+  "version": "1.0.0-SNAPSHOT",
   "private": true,
   "hugo-bin": {
     "buildTags": "extended"
