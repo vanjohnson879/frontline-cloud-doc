@@ -18,11 +18,11 @@ weight: 110
 
 The first step before using FrontLine is to configure your license key.
 
-{{< img src="configuration.png" alt="Test" caption="Test" class="border-0" >}}
+{{< img src="configuration.png" alt="Configuration screen" caption="Configuration screen prompting for license key" >}}
 
 Once you've filled your license and clicked on the "Next" button you will get the credentials to connect to the superAdmin account. You can change this password in the frontline.conf file.
 
-image::dashboard/adminCredentials.png[Login,align=center]
+{{< img src="admin-credentials.png" alt="Admin credentials" caption="Admin credentials" >}}
 
 Click on the "Next" button to finish the configuration step and restart FrontLine.
 
@@ -30,7 +30,7 @@ Click on the "Next" button to finish the configuration step and restart FrontLin
 
 Logging in is necessary to use FrontLine. FrontLine is accessible by default on port 10542.
 
-image::dashboard/login.png[Login,align=center, width=35%]
+{{< img src="login.png" alt="Login screen" caption="Login screen" >}}
 
 If it is the first time you use FrontLine, you can use the super admin account with the following credentials:
 
@@ -40,13 +40,13 @@ If it is the first time you use FrontLine, you can use the super admin account w
 If you have configured the OpenID authentication, all of your user base can connect as a viewer. Make sure that FrontLine is allowed to open pop-ups on your browser, or you won't be able to login.
 To connect as a superAdmin, click on *Connect with basic credentials* and fill as previously explained. To modify your users permissions, you'll need to go the <<users, users>> page, and modify the users.
 
-image::dashboard/oidc.png[Login,align=center, width=35%]
+{{< img src="oidc.png" alt="Login screen for OIDC" caption="Login screen for OIDC" >}}
 
 == Overview
 
 Once you are logged in, you are now able to navigate using the FrontLine navigation bar on the left side.
 
-image::dashboard/navbar.png[Navbar,align=center]
+{{< img src="navbar.png" alt="Navbar" >}}
 
 FrontLine is composed of:
 
@@ -65,7 +65,7 @@ We are now going to describe in depth each one of these sections.
 
 To access the Teams administration, click on *Admin* in the navigation bar, and choose *Teams*.
 
-image::dashboard/teams.png[Teams,align=center]
+{{< img src="teams.png" alt="Teams" >}}
 
 In the teams table, you can visualize the team name, the optional team quota, and the number of associated users, pools and simulations.
 You can also copy the team id by clicking on the icon:clipboard[] icon.
@@ -74,7 +74,7 @@ You can also copy the team id by clicking on the icon:clipboard[] icon.
 
 To open the teams settings, click on *Teams Settings* on the right side of the search bar.
 
-image::dashboard/teams-settings.png[Teams,align=center]
+{{< img src="teams-settings.png" alt="Teams settings" caption="Teams settings" >}}
 
 The simulation quota of a team means the number of simulations a team is allowed to own. By default, there won't be any limitation, and your teams will be able to create simulations until you reach the number of simulations defined in your license.
 
@@ -84,7 +84,7 @@ The checkbox *Simulations quotas* needs to be enabled if you want the quotas to 
 
 To create a team, click on the *Create* button.
 
-image::dashboard/create-team.png[Teams,align=center]
+{{< img src="create-team.png" alt="Creating a team" caption="Creating a team" >}}
 
 You can edit the team by clicking on the icon:pencil-alt[] icon and delete them using the checkboxes on the table's right part.
 Note that you can't edit a quota from this modal, it can only be done from the team settings modal.
@@ -173,13 +173,13 @@ Each role can be global or team-specific.
 
 ==== User administration
 
-image::dashboard/users.png[Users,align=center]
+{{< img src="users.png" alt="Users" >}}
 
 WARNING: If you switch between FrontLine embedded user management system and LDAP/OpenID mode, or if there is a problem fetching your user data in LDAP/OpenID, some users may be flagged as invalid. For example, if a user created in FrontLine doesn't exist in your LDAP/OpenID server, you won't be able to connect with this user anymore.
 
 To create a user, click on the *Create* button. Once the user is created, copy his password, as you won't be able to retrieve it again. OpenID authentication disable user creation, and only allow to edit users permissions (users who have already connected one time).
 
-image::dashboard/create-user.png[Teams,align=center]
+{{< img src="create-user.png" alt="Creating a user" >}}
 
 If you are using FrontLine with LDAP or OpenID, you will only have to fill the username and permissions to create a user, the other pieces of information come directly from the LDAP/OpenID. The username should be the same username as in the LDAP/OpenID.
 
@@ -192,11 +192,11 @@ It should be noted that the superAdmin account can't be deleted or even modified
 
 To access the API Tokens administration, click on *Admin* in the navigation bar, and choose *API token*.
 
-image::dashboard/tokens.png[Tokens,align=center]
+{{< img src="tokens.png" alt="Tokens" >}}
 
 To create an API token, click on the *Create* button. Once the API token is created, copy the token, as you won't be able to retrieve it again.
 
-image::dashboard/create-token.png[Tokens,align=center]
+{{< img src="create-token.png" alt="Create token" >}}
 
 There are three permissions available for an API Token:
 
@@ -212,11 +212,11 @@ To regenerate a token, click on the icon:undo[] icon.
 
 To access the Private Keys administration, click on *Admin* in the navigation bar, and choose *Private Keys*. A private key corresponds to the ssh key used to connect to your Git repository or pool instances.
 
-image::dashboard/private-keys.png[Private keys,align=center]
+{{< img src="private-keys.png" alt="Private keys" >}}
 
 To create a Private Key, click on the *Create* button.
 
-image::dashboard/create-private-key.png[Create Private Key Modal,align=center]
+{{< img src="create-private-key.png" alt="Create private key" >}}
 
 A private key can be scoped on pool or repository. It means that you can only use this private key while configuring a repository or a pool. The all scope can't be choosen, as it is only there for the legacy private keys without scope.
 
@@ -236,14 +236,14 @@ To access the repositories administration, click on *Admin* in the navigation ba
 
 There are 2 types of repository: the ones where you download and compile the sources, and the others where you download an already-compiled project
 
-image::dashboard/repositories.png[Repositories,align=center]
+{{< img src="repositories.png" alt="Repositories" >}}
 
 To create a repository, click on the *Create* button.
 You can edit the repository by clicking on the icon:pencil-alt[] icon and delete them using the checkboxes on the table's right part.
 
 ==== General
 
-image::dashboard/create-repository.png[Repository creation,align=center]
+{{< img src="create-repository.png" alt="Create repository" >}}
 
 - *Name*: the name that will appear on the repositories table.
 - *Team*: set if the repository is global or owned by a team
@@ -254,7 +254,7 @@ image::dashboard/create-repository.png[Repository creation,align=center]
 
 Choose *Build from sources* as repository type if you wish that FrontLine fetch and compile the sources of your Gatling simulation. In this page, you'll configure how to fetch the sources.
 
-image::dashboard/create-repository-sources.png[Repository creation,align=center]
+{{< img src="create-repository-sources.png" alt="Create repository sources" >}}
 
 There are 3 different ways to retrieve your sources:
 
@@ -266,7 +266,7 @@ There are 3 different ways to retrieve your sources:
 
 Choose *Download from a binary repository* if you already compiled your project and pushed to a binary repository.
 
-image::dashboard/create-repository-binary.png[Repository creation,align=center]
+{{< img src="create-repository-binary.png" alt="Create repository binary" >}}
 
 We currently support 4 different providers: JFrog Artifactory, Sonatype Nexus 2 & 3, AWS S3.
 
@@ -287,15 +287,15 @@ How to find the repository URL?
 
 - Artifactory :
 
-image::dashboard/artifactory-repository-url.png[Artifactory,align=center]
+{{< img src="artifactory-repository-url.png" alt="Artifactory repository URL" >}}
 
 - Nexus :
 
-image::dashboard/nexus-repository-url.png[Nexus,align=center]
+{{< img src="nexus-repository-url.png" alt="Nexus repository URL" >}}
 
 If you're using an AWS S3 bucket, you'll need to fill in the following fields:
 
-image::dashboard/create-repository-s3.png[Repository creation,align=center]
+{{< img src="create-repository-s3.png" alt="Create repository S3" >}}
 
 - *Profile name*: choose a profile described in `~/.aws/credentials`, or select `Use environment or system variables` to use the permissions granted to the EC2 FrontLine instance
 - *Region*: the region where you created your bucket
@@ -325,7 +325,7 @@ NOTE: Profile name requires the following permissions to be able to download fro
 
 You can view your profile at any time by clicking on the *My Profile* button in the navigation bar.
 
-image::dashboard/profile.png[Profile,align=center]
+{{< img src="profile.png" alt="Profile" >}}
 
 The informations displayed are the following:
 
@@ -349,11 +349,11 @@ To access the Simulations section, click on *Simulations* in the navbar.
 
 The Simulations view contains all the simulations you have configured and the result of their last run.
 
-image::dashboard/simulation.png[Simulation,align=center]
+{{< img src="simulation.png" alt="Simulation" >}}
 
 If you don't have any simulations configured yet and don't know how to start, you can download some FrontLine pre-configured projects by clicking on the "Download sample simulations" green button.
 
-image::dashboard/samples.png[Samples,align=center]
+{{< img src="samples.png" alt="Samples" >}}
 
 Those samples are ready to use maven, sbt and gradle projects with proper configuration for FrontLine. You can also download those samples with the download link in the Documentation section.
 
@@ -364,7 +364,7 @@ Back to the Simulations section, at the top, there is an action bar which allow 
 - Edit global properties
 - Delete selected simulations
 
-image::dashboard/action-bar.png[Action bar,align=center]
+{{< img src="action-bar.png" alt="Action bar" >}}
 
 === Global Properties
 
@@ -373,11 +373,11 @@ Editing those properties will be propagated to all the simulations.
 
 If you don't want to use the default properties, check `Use custom global properties` and enter your own.
 
-image::dashboard/properties.png[Properties,align=center]
+{{< img src="properties.png" alt="Properties" >}}
 
 If you want specific properties for a simulation, you will be allowed to ignore those properties by checking the `Override Global Properties` box when creating or editing the simulation:
 
-image::dashboard/override.png[Override,align=center]
+{{< img src="override.png" alt="Override" >}}
 
 === Creating a simulation
 
@@ -388,7 +388,7 @@ In order to create a simulation click on the "Create" button in the simulations 
 
 ==== Step 1: General
 
-image::dashboard/create-simulation1.png[CreateSimulation,align=center, scaledwidth="75%"]
+{{< img src="create-simulation1.png" alt="Create simulation - Step 1" >}}
 
 - *Name*: the name that will appear on the simulations table.
 - *Team*: the team which owns the simulation.
@@ -398,7 +398,7 @@ image::dashboard/create-simulation1.png[CreateSimulation,align=center, scaledwid
 
 In this step, you'll describe which <<managing-repositories,repository>> FrontLine will use, and how to use it.
 
-image::dashboard/create-simulation2a.png[CreateSimulation,align=center, scaledwidth="75%"]
+{{< img src="create-simulation2a.png" alt="Create simulation - Step 2a" >}}
 
 - *Build type*: How you want to retrieve and build your simulation. You may choose to build from sources, download a binary from a Sonatype Nexus or JFrog Artifactory repository, or download a binary from an AWS S3 bucket.
 - *Repository*: The <<managing-repositories,repository>> you created previously
@@ -425,7 +425,7 @@ You can provide optional settings if you toggle *Advanced build configuration*.
 In this step, you'll describe how FrontLine will download a jar deployed in an previously added repository.
 This jar must have been built with the same maven/sbt/gradle configuration as described in the Developer section in this guide.
 
-image::dashboard/create-simulation2c.png[CreateSimulation,align=center, scaledwidth="75%"]
+{{< img src="create-simulation2c.png" alt="Create simulation - Step 2c" >}}
 
 - *Artifact Maven coordinates*: the maven coordinates of the desired artifact. _version markers are not supported_
 
@@ -434,7 +434,7 @@ image::dashboard/create-simulation2c.png[CreateSimulation,align=center, scaledwi
 In this step, you'll describe how FrontLine will download a jar deployed in an AWS S3 bucket.
 This jar must have been built with the same maven/sbt/gradle configuration as described in the Developer section in this guide.
 
-image::dashboard/create-simulation2b.png[CreateSimulation,align=center, scaledwidth="75%"]
+{{< img src="create-simulation2b.png" alt="Create simulation - Step 2b" >}}
 
 - *Key*: the key for the jar you want to download
 
@@ -442,7 +442,7 @@ image::dashboard/create-simulation2b.png[CreateSimulation,align=center, scaledwi
 
 In this step, you'll configure the pools used for the FrontLine injectors.
 
-image::dashboard/create-simulation3.png[CreateSimulation,align=center, scaledwidth="75%"]
+{{< img src="create-simulation3.png" alt="Create simulation - Step 3" >}}
 
 - *Weight distribution*: on even, every injector will produce the same load. On custom, you have to set the weight in % of each pool (eg the first pool does 20% of the requests, and the second does 80%). The sum of the weight should be 100%.
 - *Pools*: defines the pools to be used when initiating the FrontLine injectors, see the section about <<pools, pools>>.
@@ -455,8 +455,8 @@ After this step, you can save the simulation, or click on *More options* to acce
 
 These steps allows you to defines JVM arguments and system properties used when running this particular simulation. You can choose to override the global properties.
 
-image::dashboard/create-simulation4.png[CreateSimulation,align=center, scaledwidth="75%"]
-image::dashboard/create-simulation5.png[CreateSimulation,align=center, scaledwidth="75%"]
+{{< img src="create-simulation4.png" alt="Create simulation - Step 4" >}}
+{{< img src="create-simulation5.png" alt="Create simulation - Step 5" >}}
 
 NOTE: JVM options and Java System Properties will be saved in a snapshot that will be available in the run. This information will be visible by anyone who has read access.
 You can exclude some properties from being copied if you prefix them with `sensitive.`.
@@ -468,7 +468,7 @@ For example, setting this property as `.foo.com, .bar.com` will consolidate stat
 
 Configuring a ramp up or ramp down means that the start and end of your simulation won't be used for calculating metrics and assertions.
 
-image::dashboard/create-simulation6.png[CreateSimulation,align=center, scaledwidth="75%"]
+{{< img src="create-simulation6.png" alt="Create simulation - Step 6" >}}
 
 - *Ramp Up*: the number of seconds you want to exclude at the beginning of the run.
 - *Ramp Down*: the number of seconds you want to exclude at the end of the run.
@@ -480,7 +480,7 @@ NOTE: Ramps parameters will only be applied if the run duration is longer than t
 
 Now that you have created a simulation, you can start it by clicking on the icon:play[] icon in the *Start* column of the table.
 
-image::dashboard/start.png[Launch,align=center]
+{{< img src="start.png" alt="Start" >}}
 
 A run have the following life cycle:
 
@@ -488,18 +488,18 @@ A run have the following life cycle:
 - *Deploying*: in which it will deploy the simulation to run on all the hosts
 - *Injecting*: in which the simulation is running and viewable from the Reports
 
-image::dashboard/injecting.png[Injecting,align=center]
+{{< img src="injecting.png" alt="Injecting" >}}
 
 [[logs]]
 By clicking on the icon:file-alt[] icon in the *Build Start* column, Frontline will display the build logs of the simulation. There is a limit of 1000 logs for a run.
 
-image::dashboard/logs.png[Logs,align=center]
+{{< img src="logs.png" alt="Logs" >}}
 
 [[assertions]]
 You can click on the icon:search[] icon next to the status (if there is one) to display the assertions of the run.
 Assertions are the assumptions made at the beginning of the simulation to be verified at the end:
 
-image::dashboard/assertions.png[Assertions,align=center]
+{{< img src="assertions.png" alt="Assertions" >}}
 
 === Useful tips
 
@@ -519,12 +519,12 @@ Runs list and trends can be accessed by clicking on the icon:history[] icon in t
 
 This view contains the list of your simulation's runs which can be filtered by name and/or status and the Trends which are displaying information between those runs.
 
-image::dashboard/run-trends.png[Runs/Trends,align=center]
+{{< img src="run-trends.png" alt="Run trends" >}}
 
 [[runs-table]]
 ==== Runs table
 
-image::dashboard/run-table.png[RunTable,align=center]
+{{< img src="run-table.png" alt="Run table" >}}
 
 Like the result of the latest run in the <<simulation-table, simulations table>> you have access to the <<logs, logs>> of the run by clicking on the icon:file-alt[] icon and you can sort the table by each columns. The logs are only available for run which are not flagged as "Successful".
 
@@ -533,15 +533,15 @@ You can delete runs by selecting them and click on the *Delete* button in the ac
 
 You can comment a run by clicking on the icon:comment-alt[] icon on the right side of the table.
 
-image::dashboard/comment.png[Comment,align=center, width=400%]
+{{< img src="comment.png" alt="Comment" >}}
 
 You can also click on the icon:info-circle[] icon to see a snapshot of the run configuration. The system properties beginning with `sensitive.` are not displayed.
 
-image::dashboard/snapshot.png[Snapshot,align=center]
+{{< img src="snapshot.png" alt="Snapshot" >}}
 
 ==== Run Comparison
 
-image::dashboard/compareRuns.png[CompareRuns,align=center]
+{{< img src="compare-runs.png" alt="Compare runs" >}}
 
 You can compare the results of two runs if you click on the "Compare runs" button in the table. It allows you to compare the response time and errors of the two runs for each request.
 
@@ -554,12 +554,12 @@ The delta and variance will be displayed, so you can check if there is a progres
 The trends are charts that will display some globals statistics for each runs (eg: requests count) so that you can easily see how well your runs went compared to each other.
 Each run is represented by his number in the chart and the chart won't display the statistics of a failed run (eg: Timeout, broken, etc..).
 
-image::dashboard/trends.png[Trends,align=center]
+{{< img src="trends.png" alt="Trends" >}}
 
 You can filter the statistics shown by filtering through scenarios, groups or requests that are involved in each runs.
 You can chose how many runs will be compared by changing the limit (10, 25, 50, 100):
 
-image::dashboard/trends-bar.png[TrendsBar,align=center]
+{{< img src="trends-bar.png" alt="Trends bar" >}}
 
 [[reports]]
 === Reports
@@ -578,14 +578,14 @@ This page consists of:
 - <<summary, The summary>> (only for requests and groups tabs)
 - <<export, Export PDF>>
 
-image::dashboard/reports.png[Reports,align=center]
+{{< img src="reports.png" alt="Reports" >}}
 
 [[top-navigation]]
 ==== Top Navigation Bar
 
 The navigation bar enable you to choose the simulation time range.
 
-image::dashboard/timewindow.png[TimeWindow,align=center]
+{{< img src="timewindow.png" alt="Timewindow" >}}
 
 [[timeline]]
 ==== Timeline
@@ -597,7 +597,7 @@ The resolution indicates the number of seconds per data point in the graph.
 
 You can change the time range with control buttons or by selecting a region on the timeline:
 
-image::dashboard/timeline.png[Timeline,align=center]
+{{< img src="timeline.png" alt="Timeline" >}}
 
 ==== Assertions
 
@@ -605,7 +605,7 @@ The label below is used to display the status of the simulation (Ongoing, succes
 If your simulation has assertions, this label will be clickable to show the assertions results.
 You can comment the run run by clicking on the icon:comment-alt[] icon.
 
-image::dashboard/timeline-assertions.png[Assertions,align=center,width=400%]
+{{< img src="timeline-assertions.png" alt="Timeline assertions" >}}
 
 [[tabs]]
 ==== Tabs
@@ -613,7 +613,7 @@ image::dashboard/timeline-assertions.png[Assertions,align=center,width=400%]
 Below the navigator chart, there are tabs to switch charts.
 Each tab has the same structure except the summary that is available only for requests and groups tabs.
 
-image::dashboard/tabs.png[Tabs,align=center]
+{{< img src="tabs.png" alt="Tabs" >}}
 
 [[run-bar]]
 ==== Run Bar
@@ -626,19 +626,19 @@ This bar is a combination of buttons:
 - *Switch to Summary*: Switch to <<summary, summary>> view for Requests & Groups tabs
 - buttons to filter the metrics drawn in the charts area
 
-image::dashboard/run-bar.png[RunBar,align=center,width=120%]
+{{< img src="run-bar.png" alt="Run bar" >}}
 
 ===== Generate Public Links
 
 A public link is a link of the current reports which will be accessible to anyone, without having to log-in to FrontLine. To generate a public link, click on the *Generate public link* button and choose the expiration date of your link.
 
-image::dashboard/generate-public-link.png[generatePublicLink,align=center,width=400%]
+{{< img src="generate-public-link.png" alt="Generate public links" >}}
 
 The maximum allowed lifetime for a public link is 1 year.
 
 Once you have chosen an expiration date, you can proceed by clicking on the generate button.
 
-image::dashboard/successful-generation-public-link.png[SuccessfulLink,align=center]
+{{< img src="successful-generation-public-link.png" alt="Successful public link generation" >}}
 
 You can copy the public link to share your reports to non-FrontLine users, or click on the "Go" Button to access it yourself. You can click on the "OK" button to close this modal.
 
@@ -648,15 +648,15 @@ You can copy the public link to share your reports to non-FrontLine users, or cl
 Each charts in FrontLine are connected to each other, so if you select a time window on a chart it will automatically change it
 for all other charts. Metrics are drawn in multiple charts.
 
-image::dashboard/charts.png[Charts,align=center]
+{{< img src="charts.png" alt="Charts" >}}
 
 Some of them have an icon to update the chart settings:
 
-image::dashboard/distrib-chart.png[DistributionChart,align=center]
+{{< img src="distrib-chart.png" alt="Distribution chart" >}}
 
 Moreover, histograms and pies are hidden behind each counts charts, accessible by clicking their top right corner icon below.
 
-image::dashboard/pie-button.png[PieChart,align=center]
+{{< img src="pie-button.png" alt="Pie button" >}}
 
 WARNING: If your kernel version is too low (around below 3.10) you might not be able to get data from the TCP connection by state graph on the Connections tab. If you want to be able to get these data, you should upgrade your kernel.
 
@@ -670,13 +670,13 @@ will refresh his data to match the time window.
 
 On Flat mode you can filter the data by clicking any column name of the table.
 
-image::dashboard/summary.png[Summary,align=center]
+{{< img src="summary.png" alt="Summary" >}}
 
 [[export]]
 ==== Export PDF
 When clicking on the green button in the navigation bar, you will have access to a page where you can configure and then export a PDF report of a specific simulation.
 
-image::dashboard/export-button.png[Export,align=center]
+{{< img src="export-button.png" alt="Export button" >}}
 
 This report is initialized with:
 
@@ -690,7 +690,7 @@ This report is initialized with:
 * Responses per Second by Status
 * Response Time Percentiles
 
-image::dashboard/export-page.png[Export,align=center]
+{{< img src="export-page.png" alt="Export page" >}}
 
 This page is a configurable list of different elements that will be displayed in the report. You can click on the blue add button under every element
 to add another one.
@@ -713,11 +713,11 @@ Those elements are composed of:
 As you can see below, every charts (or other elements) can be interact with individually. You can zoom on it, or select the run, the scenario,
 the group, etc.. whose you want your data to be fetch. You do not need to have the same settings for each element.
 
-image::dashboard/export-charts.png[Export,align=center]
+{{< img src="export-charts.png" alt="Export charts" >}}
 
 After adding all desired elements in the report you can click on the *Export PDF* button on the top right to get your PDF file.
 
-image::dashboard/export-actions.png[Export,align=center]
+{{< img src="export-actions.png" alt="Export actions" >}}
 
 There are two more actions you can do:
 
@@ -741,21 +741,21 @@ It is possible to change the time range window by the following actions:
 
 To ease your analysis, you can create markers on all the charts by right clicking on them. And click on the top of the marker to delete it.
 
-image::dashboard/marker.png[Marker,align=center]
+{{< img src="marker.png" alt="Marker" >}}
 
 ===== Multiple Highlights
 
 In the top right menu, you can activate the *Multiple Highlights* setting which allows the tooltip to be displayed on every chart at the same time.
 
-image::dashboard/multiplecheck.png[Marker,align=center]
-image::dashboard/multiple.png[Marker,align=center]
+{{< img src="multiplecheck.png" alt="Multiple check" >}}
+{{< img src="multiple.png" alt="Multiple" >}}
 
 ===== Percentiles Mask
 
 In the top right menu, you can click on the *Percentiles* setting to be able to chose what percentiles to display in the chart.
 
-image::dashboard/percentilesmask.png[Mask,align=center]
-image::dashboard/percentileschart.png[Mask,align=center]
+{{< img src="percentilesmask.png" alt="Percentiles mask" >}}
+{{< img src="percentileschart.png" alt="Percentiles chart" >}}
 
 ===== Date Time / Elapsed Time
 
@@ -766,23 +766,23 @@ In the top right menu, you can activate the *Date Time* setting to be able to sw
 By hovering the label on the percentiles chart legend, you will be able to highlight the curve on the chart, leading to a better view of that curve.
 The highlight legend options is enable to every "non stacked" graph.
 
-image::dashboard/highlightchart.png[Mask,align=center]
+{{< img src="highlightchart.png" alt="Highlight chart" >}}
 
 == Documentation
 
 You can click on the Documentation icon in the navigation bar on the bottom left of the screen to display every link to the FrontLine documentation and samples.
 
-image::dashboard/documentation.png[Mask,align=center]
+{{< img src="documentation.png" alt="Documentation" >}}
 
 == Plugins Download
 
 If you want to download one of your official FrontLine plugin, please click on the Plugins icon in the navigation bar. For more informations about the plugins, please refer to our plugins guide: https://gatling.io/docs/frontline/FrontLine-Plugins-Guide.pdf
 
-image::dashboard/plugins_modal.png[Mask,align=center]
+{{< img src="plugins-modal.png" alt="Plugins modal" >}}
 
 
 == About
 
 You can click on the About icon in the navigation bar to display the informations about your FrontLine version and about your license.
 
-image::dashboard/about.png[Mask,align=center]
+{{< img src="about.png" alt="About" >}}
