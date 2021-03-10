@@ -7,19 +7,20 @@ titleAddition = "FrontLine Cloud Documentation"
 description = ""
 
 ## Open Graph + Twitter Cards
-images = ["doks.png"]
-twitterSite = "henkverlinde"
-twitterCreator = "henkverlinde"
-facebookAuthor = "verlinde.henk"
-facebookPublisher = "verlinde.henk"
+images = ["gatling-logo.png"]
+twitterSite = "GatlingTool"
+twitterCreator = "GatlingTool"
+facebookAuthor = "GatlingTool"
+facebookPublisher = "GatlingTool"
 ogLocale = "en_US"
 
 ## JSON-LD
 schemaType = "Organization"
-schemaLogo = "logo-doks.png"
-schemaTwitter = "https://twitter.com/henkverlinde"
-schemaLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaGitHub = "https://github.com/h-enk"
+schemaName = "Gatling Corp"
+schemaLogo = "gatling-logo.png"
+schemaTwitter = "https://twitter.com/GatlingTool"
+schemaLinkedIn = "https://www.linkedin.com/company/gatling/"
+schemaGitHub = "https://github.com/gatling"
 schemaSection = "blog"
 
 ## Sitelinks Search Box
@@ -39,8 +40,8 @@ lqipWidth = "20x"
 footer = "Powered by <a href=\"https://gohugo.io/\">Hugo</a>, and <a href=\"https://getdoks.org/\">Doks</a>"
 
 # Alert
-alert = true
-alertText = "Like Doks? <a class=\"alert-link\" href=\"https://github.com/h-enk/doks/stargazers\">Star on GitHub</a>. Thanks!</a>"
+alert = false
+alertText = ""
 
 # Edit Page
 docsRepo = "https://github.com/gatling/frontline-cloud-doc"
