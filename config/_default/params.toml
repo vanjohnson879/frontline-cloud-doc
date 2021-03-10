@@ -1,5 +1,9 @@
 # Meta Data for SEO
 
+title = "FrontLine Cloud"
+titleSeparator = "-"
+description = "FrontLine Cloud Documentation"
+
 ## Homepage
 redirectTo = "/docs/user/developer/"
 
