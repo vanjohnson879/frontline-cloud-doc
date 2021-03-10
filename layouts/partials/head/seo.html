@@ -11,7 +11,9 @@
 {{ end -}}
 
 {{ if .IsHome -}}
-  <title>{{ .Site.Params.title }} {{ .Site.Params.titleSeparator }} {{ .Site.Params.titleAddition }}</title>
+  <title>Redirecting to {{ .Site.Params.redirectTo }}</title>
+  <meta http-equiv="refresh" content="0; URL={{ .Site.BaseURL }}{{ .Site.Params.redirectTo }}">
+  <link rel="canonical" href="{{ .Site.BaseURL }}{{ .Site.Params.redirectTo }}">
 {{ else -}}
   <title>{{ .Title }} {{ .Site.Params.titleSeparator }} {{ .Site.Params.title }}</title>
 {{ end -}}

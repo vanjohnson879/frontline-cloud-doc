@@ -1,10 +1,7 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "FrontLine Cloud"
-titleSeparator = "-"
-titleAddition = "FrontLine Cloud Documentation"
-description = ""
+redirectTo = "/docs/user/developer/"
 
 ## Open Graph + Twitter Cards
 images = ["gatling-logo.png"]
