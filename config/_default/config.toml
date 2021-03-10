@@ -27,6 +27,8 @@ rel  = "sitemap"
     preserveTOC = false
     [markup.asciidocExt.attributes]
       toc = true
+      iconfont-name = "font-awesome"
+      icons = "font"
   [markup.goldmark]
     [markup.goldmark.extensions]
       linkify = false
@@ -70,3 +72,6 @@ rel  = "sitemap"
   [[module.mounts]]
     source = "node_modules/flexsearch"
     target = "assets/js/vendor/flexsearch"
+  [[module.mounts]]
+    source = "node_modules/@fortawesome/fontawesome-free/webfonts"
+    target = "static/webfonts"
