@@ -12,8 +12,6 @@ menu:
 weight: 030
 ---
 
-=
-
 == Purpose of this plugin
 
 This plugin enables you to start a Gatling FrontLine simulation directly from your Bamboo platform. This plugin links a Bamboo job with one Gatling FrontLine simulation. +
