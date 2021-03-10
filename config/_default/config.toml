@@ -25,8 +25,8 @@ rel  = "sitemap"
   [markup.asciidocExt]
     extensions = ["asciidoctor-diagram", "asciidoctor-html5s"]
     preserveTOC = false
-  [markup.asciidocExt.attributes]
-    toc = true
+    [markup.asciidocExt.attributes]
+      toc = true
   [markup.goldmark]
     [markup.goldmark.extensions]
       linkify = false
