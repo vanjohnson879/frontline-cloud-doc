@@ -23,7 +23,7 @@ rel  = "sitemap"
 
 [markup]
   [markup.asciidocExt]
-    extensions = ["asciidoctor-diagram", "asciidoctor-html5s"]
+    extensions = ["asciidoctor-html5s"]
     preserveTOC = false
     [markup.asciidocExt.attributes]
       toc = true
