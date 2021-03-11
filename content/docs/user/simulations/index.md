@@ -132,6 +132,8 @@ A run have the following life cycle:
 
 {{< img src="injecting.png" alt="Injecting" >}}
 
+{{< anchor logs >}}
+
 By clicking on the {{< icon file-alt >}} icon in the **Build Start** column, Frontline will display the build logs of the simulation. There is a limit of 1000 logs for a run.
 
 {{< img src="logs.png" alt="Logs" >}}
@@ -154,7 +156,7 @@ Be aware that deleting a simulation will delete all the associated runs.
 
 ## Run / Trends
 
-Runs list and trends can be accessed by clicking on the {{< icon history >}} icon in the <<simulation-table, simulations table>>.
+Runs list and trends can be accessed by clicking on the {{< icon history >}} icon in the [simulations table]({{< relref "#simulations-table" >}}).
 
 This view contains the list of your simulation's runs which can be filtered by name and/or status and the Trends which are displaying information between those runs.
 {{< img src="run-trends.png" alt="Run trends" >}}
@@ -163,9 +165,9 @@ This view contains the list of your simulation's runs which can be filtered by n
 
 {{< img src="run-table.png" alt="Run table" >}}
 
-Like the result of the latest run in the <<simulation-table, simulations table>> you have access to the <<logs, logs>> of the run by clicking on the {{< icon file-alt >}} icon and you can sort the table by each columns. The logs are only available for run which are not flagged as "Successful".
+Like the result of the latest run in the [simulations table]({{< relref "#simulations-table" >}}) you have access to the [logs]({{< relref "#logs" >}}) of the run by clicking on the {{< icon file-alt >}} icon and you can sort the table by each columns. The logs are only available for run which are not flagged as "Successful".
 
-If there is one, You can click on the {{< icon search >}} icon next to the status to display the <<assertions, assertions>> of the run.
+If there is one, You can click on the {{< icon search >}} icon next to the status to display the [assertions]({{< relref "#assertions" >}}) of the run.
 You can delete runs by selecting them and click on the **Delete** button in the action bar above the table.
 
 You can comment a run by clicking on the {{< icon comment-alt >}} icon on the right side of the table.
@@ -200,19 +202,18 @@ You can chose how many runs will be compared by changing the limit (10, 25, 50, 
 
 ## Reports
 
-The reports can be accessed by clicking on the {{< icon chart-area >}} icon in the <<simulation-table, simulation table>> or in the <<runs-table, runs table>>.
-
+The reports can be accessed by clicking on the {{< icon chart-area >}} icon in the [simulations table]({{< relref "#simulations-table" >}}) or in the [runs table]({{< relref "#runs-table" >}}).
 
 This view introduce all the metrics available for a specific run.
 This page consists of:
 
-- <<top-navigation, The top navigation bar>>
-- <<timeline, The timeline>>
-- <<tabs, Tabs>>
-- <<run-bar, The run bar>>
-- <<charts, Charts area>>
-- <<summary, The summary>> (only for requests and groups tabs)
-- <<export, Export PDF>>
+- [The top navigation bar]({{< relref "#top-navigation-bar" >}})
+- [The timeline]({{< relref "#timeline" >}})
+- [Tabs]({{< relref "#tabs" >}})
+- [The run bar]({{< relref "#run-bar" >}})
+- [Charts area]({{< relref "#charts" >}})
+- [The summary]({{< relref "#summary-requests-and-groups-only" >}}) (only for requests and groups tabs)
+- [Export PDF]({{< relref "#export-pdf" >}})
 
 {{< img src="reports.png" alt="Reports" >}}
 
@@ -255,7 +256,7 @@ This bar is a combination of buttons:
 - **Start / Abort**: Use this button to start a new run of the simulation, or stop the ongoing run (not available if you have a Viewer permission)
 - **Grafana**: Link to the Grafana dashboard if you have filled in the configuration in frontline.conf
 - **Generate public link**: To create a public link
-- **Switch to Summary**: Switch to <<summary, summary>> view for Requests & Groups tabs
+- **Switch to Summary**: Switch to [summary]({{< relref "#summary-requests-and-groups-only" >}}) view for Requests & Groups tabs
 - buttons to filter the metrics drawn in the charts area
 
 {{< img src="run-bar.png" alt="Run bar" >}}
