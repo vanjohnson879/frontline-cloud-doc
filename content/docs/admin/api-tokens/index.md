@@ -12,13 +12,13 @@ menu:
 weight: 040
 ---
 
-=== Managing API Tokens
+## Managing API Tokens
 
-To access the API Tokens administration, click on *Admin* in the navigation bar, and choose *API token*.
+To access the API Tokens administration, click on **Admin** in the navigation bar, and choose **API token**.
 
 {{< img src="tokens.png" alt="Tokens" >}}
 
-To create an API token, click on the *Create* button. Once the API token is created, copy the token, as you won't be able to retrieve it again.
+To create an API token, click on the **Create** button. Once the API token is created, copy the token, as you won't be able to retrieve it again.
 
 {{< img src="create-token.png" alt="Create token" >}}
 

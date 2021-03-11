@@ -1,13 +1,5 @@
 # FrontLine Cloud Documentation
 
-Ruby dependencies:
-
-```bash
-gem install asciidoctor
-gem install asciidoctor-html5s
-gem install pygments.rb
-```
-
 Node.js dependencies:
 
 ```

@@ -22,21 +22,6 @@ noUgly = true
 rel  = "sitemap"
 
 [markup]
-  [markup.asciidocExt]
-    preserveTOC = false
-    [markup.asciidocExt.attributes]
-      "docinfo" = "shared"
-      "experimental" = "true"
-      "figure-caption!" = ""
-      "icons" = "font"
-      "iconfont-name" = "font-awesome"
-      "nofooter" = ""
-      "sectlinks" = ""
-      "sectanchors" = ""
-      "skip-front-matter" = ""
-      "source-highlighter" = "highlightjs"
-      "toc" = "true"
-      "toc-title!" = ""
   [markup.goldmark]
     [markup.goldmark.extensions]
       linkify = false
