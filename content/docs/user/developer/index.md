@@ -12,25 +12,22 @@ menu:
 weight: 030
 ---
 
-== FrontLine Gatling Versions
+## FrontLine Gatling Versions
 
 FrontLine actually uses custom versions of the Gatling components. Those binaries are not open sources and their usage is restricted to FrontLine.
 When you'll be deploying tests with FrontLine, it will replace your Gatling OSS dependencies with their custom counterparts.
 
-== Configuring Gatling Projects
+## Configuring Gatling Projects
 
-=== Maven
+### Maven
 
 In your `pom.xml`, you have to add in:
 
-* pull Gatling dependencies
-* add the maven plugin for Scala, so your code gets compiled
-* add the maven plugin for FrontLine, so it can package your code into a deployable artifact
+- pull Gatling dependencies
+- add the maven plugin for Scala, so your code gets compiled
+- add the maven plugin for FrontLine, so it can package your code into a deployable artifact
 
-// FIXME: Use page resource
-.pom.xml:
-[source,xml,subs=attributes+]
-----
+```xml
 <dependencies>
   <dependency>
     <groupId>io.gatling.highcharts</groupId>
@@ -91,16 +88,14 @@ In your `pom.xml`, you have to add in:
     </plugin>
   </plugins>
 </build>
-----
+```
 
 You can run `mvn package -DskipTests` in your terminal and check you get a jar containing all the dependencies of the simulation.
 
 You can also exclude dependencies you don't want to ship, eg:
 
-// FIXME: Use page resource
 .pom.xml:
-[source,xml,subs=attributes+]
-----
+```xml
 <plugin>
   <groupId>io.gatling.frontline</groupId>
   <artifactId>frontline-maven-plugin</artifactId>
@@ -121,21 +116,18 @@ You can also exclude dependencies you don't want to ship, eg:
     </execution>
   </executions>
 </plugin>
-----
+```
 
-=== SBT
+### SBT
 
 In a sbt project, you have to:
 
-* pull Gatling dependencies
-* add the sbt plugin for FrontLine, so it can package your code into a deployable artifact
+- pull Gatling dependencies
+- add the sbt plugin for FrontLine, so it can package your code into a deployable artifact
 
 A `build.sbt` file should look like this:
 
-// FIXME: Use page resource
-.build.sbt:
-[source,scala,subs=attributes+]
-----
+```scala
 enablePlugins(GatlingPlugin, FrontLinePlugin)
 
 // If you want to package simulations from the 'it' scope instead
@@ -151,12 +143,11 @@ val gatlingVersion = "{gatlingVersion}"
 libraryDependencies += "io.gatling.highcharts" % "gatling-charts-highcharts" % gatlingVersion % "test"
 // only required if you intend to use the gatling-sbt plugin
 libraryDependencies += "io.gatling"            % "gatling-test-framework"    % gatlingVersion % "test"
-----
+```
 
 WARNING: We only support sbt 1+, not sbt 0.13.
 
-WARNING: If you use the 'it' config, you have to use a custom build command as the defauit one is for the 'test' config:
-``sbt -J-Xss100M ;clean;it:assembly -batch --error``
+WARNING: If you use the 'it' config, you have to use a custom build command as the defauit one is for the 'test' config: `sbt -J-Xss100M ;clean;it:assembly -batch --error`
 
 WARNING: We recommend disabling Coursier for now. There are several bugs in the sbt/Coursier integration that makes our plugin work in a suboptimal fashion.
 
@@ -164,38 +155,36 @@ INFO: The `gatling-test-framework`dependencies is only needed if you intend to r
 
 INFO: If you use very long method calls chains in your Gatling code, you might have to increase sbt's thread stack size:
 
-----
+```bash
 $ export SBT_OPTS="-Xss100M"
-----
+```
 
 You will also need the following lines in the `project/plugins.sbt` file:
 
-.project/plugins.sbt
-[source,scala,subs="attributes+"]
-----
+.project/plugins.sbt:
+
+```scala
 // only if you intend to use the gatling-sbt plugin for running Gatling locally
 addSbtPlugin("io.gatling" % "gatling-sbt" % "{gatlingSbtPluginVersion}")
 // so sbt can build a package for FrontLine
 addSbtPlugin("io.gatling.frontline" % "sbt-frontline" % "{frontLineSbtPluginVersion}")
-----
+```
 
 You can run `sbt test:assembly` (or `sbt it:assembly` if you've configured the plugin for integration tests) in your terminal and check you get a jar containing all the dependencies of the simulation.
 
 INFO: The `gatling-sbt` is optional.
 
-=== Gradle
+### Gradle
 
 In a Gradle project, you have to:
 
-* pull Gatling dependencies
-* add the gradle plugin for FrontLine, so it can package your code into a deployable artifact
+- pull Gatling dependencies
+- add the gradle plugin for FrontLine, so it can package your code into a deployable artifact
 
 A `build.gradle` file should look like this:
 
-// FIXME: Use page resource
 .build.gradle:
-[source,groovy,subs="attributes+"]
-----
+```groovy
 plugins {
     // The following line allows to load io.gatling.gradle plugin and directly apply it
     id 'io.gatling.frontline.gradle' version '{frontLineGradlePluginVersion}'
@@ -210,16 +199,16 @@ repositories {
 gatling {
     toolVersion = '{gatlingVersion}'
 }
-----
+```
 
 You can run `gradle frontLineJar` in your terminal and check you get a jar containing all the dependencies of the simulation.
 
-=== Multi-Module Support
+### Multi-Module Support
 
 If your project is a multi-module one, make sure that only the one containing the Gatling Simulations gets configured with the Gatling related plugins describes above.
 FrontLine will take care of deploying all available jars so you can have Gatling module depend on the other ones.
 
-== Note on Feeders
+## Note on Feeders
 
 A typical mistake with Gatling and FrontLine is to rely on having an exploded maven/gradle/sbt project structure and try loading files from the project filesystem.
 
@@ -228,18 +217,17 @@ This filesystem structure will be gone once FrontLine will have compiled your pr
 If your feeder files are packaged with your test sources, you must resolve them from the classpath.
 This way will always work, both locally and with FrontLine.
 
-[source,scala]
-----
+```scala
 // incorrect
 val feeder = csv("src/test/resources/foo.csv")
 
 // correct
 val feeder = csv("foo.csv")
-----
+```
 
-== Specific Gatling Features
+## Specific Gatling Features
 
-=== Load Sharding
+### Load Sharding
 
 Injection rates and throttling rates are automatically distributed amongst nodes.
 
@@ -247,10 +235,9 @@ However, Feeders data is not automatically sharded, as it might not be the desir
 
 If you want data to be unique cluster-wide, you have to explicitly tell Gatling to shard the data, e.g.:
 
-[source,scala]
-----
+```scala
 val feeder = csv("foo.csv").shard
-----
+```
 
 Assuming a CSV file contains 1000 entries, and 3 Gatling nodes, the entries will be distributed the following way:
 
@@ -260,7 +247,7 @@ Assuming a CSV file contains 1000 entries, and 3 Gatling nodes, the entries will
 
 NOTE: `shard` is available in Gatling OSS DSL but is a noop there. It's only effective when running tests with FrontLine.
 
-== Resolving Injector Location in Simulation
+## Resolving Injector Location in Simulation
 
 When running a distributed test from multiple locations, you could be interested in knowing where a given injector is deployed in order to trigger specific behaviors depending on location.
 
@@ -268,11 +255,10 @@ For example, you might want to hit `https://mydomain.co.uk` `baseUrl` if injecto
 
 You can resolve in your simulation code the name of the pool a given injector is deployed on:
 
-[source,scala]
-----
+```scala
 val poolName = System.getProperty("gatling.frontline.poolName")
 val baseUrl = if (poolName == "London") "https://domain.co.uk" else "https://domain.com"
-----
+```
 
 NOTE: This System property is only defined when deploying with FrontLine.
 It's not defined when running locally with any Gatling OSS launcher.

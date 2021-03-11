@@ -12,14 +12,13 @@ menu:
 weight: 080
 ---
 
-== Documentation
+## Documentation
 
 You can click on the Documentation icon in the navigation bar on the bottom left of the screen to display every link to the FrontLine documentation and samples.
 
 {{< img src="documentation.png" alt="Documentation" >}}
 
-// FIXME: not here ?
-== Plugins Download
+## Plugins Download
 
 If you want to download one of your official FrontLine plugin, please click on the Plugins icon in the navigation bar. For more informations about the plugins, please refer to our plugins guide: https://gatling.io/docs/frontline/FrontLine-Plugins-Guide.pdf
 

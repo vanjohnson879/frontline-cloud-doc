@@ -12,7 +12,7 @@ menu:
 weight: 060
 ---
 
-== Public APIs
+## Public APIs
 
 The FrontLine API server also exposes a public API that you can use to trigger runs or fetch run results and metrics.
 

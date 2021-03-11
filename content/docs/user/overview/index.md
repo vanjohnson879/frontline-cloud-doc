@@ -25,4 +25,3 @@ FrontLine is composed of:
 - The About section, letting you know the current version of FrontLine and the expiration date of your license key
 
 We are now going to describe in depth each one of these sections.
-
