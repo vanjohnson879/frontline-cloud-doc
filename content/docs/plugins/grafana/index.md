@@ -34,7 +34,9 @@ You can install it using the grafana-cli:
 
 {{< img src="datasource-menu.png" alt="" >}}
 
-TIP: NOTE: If this link is missing in the side menu, it means that your current user does not have the `Admin` role for the current organization.
+{{< alert tip >}}
+If this link is missing in the side menu, it means that your current user does not have the `Admin` role for the current organization.
+{{< /alert >}}
 
 - Click the `Add data source` link in the top header.
 - Select `FrontLine`.
@@ -52,10 +54,14 @@ TIP: NOTE: If this link is missing in the side menu, it means that your current 
 
 ## Templating
 
-TIP: Our team provides some dashboards that you can import if you don't want to bother about setting up all the charts and these template variables.
+{{< alert tip >}}
+Our team provides some dashboards that you can import if you don't want to bother about setting up all the charts and these template variables.
+{{< /alert >}}
 
-TIP: Samples are in the `dashboardSamples` directory in your Grafana bundle.  +
+{{< alert tip >}}
+Samples are in the `dashboardSamples` directory in your Grafana bundle.  +
 They are built with a datasource named *FrontLine*. Make sure this datasource exists or modify the json file accordingly.
+{{< /alert >}}
 
 To use the FrontLine datasource in Grafana, you will need to set template variables.
 
@@ -79,7 +85,9 @@ At the end, your template variables should be something like:
 
 ## FrontLine Metrics
 
-TIP: You can get the list of metrics and test the results via FrontLine's Swagger UI, available through `Documentation` and `FrontLine API Documentation` in the FrontLine dashboard.
+{{< alert tip >}}
+You can get the list of metrics and test the results via FrontLine's Swagger UI, available through `Documentation` and `FrontLine API Documentation` in the FrontLine dashboard.
+{{< /alert >}}
 
 FrontLine offers a large amount of metrics:
 
@@ -121,7 +129,9 @@ FrontLine offers a large amount of metrics:
 - **DNS metrics:**
     - `dns.<Percentiles>`: DNS resolution duration percentiles metric.
 
-NOTE: <Percentiles> are: min, p25, p50, p75, p80, p85, p90, p95, p99, p999, p9999, max, mean and pAll. (pAll is useful if you want to display in the same graph).
+{{< alert tip >}}
+<Percentiles> are: min, p25, p50, p75, p80, p85, p90, p95, p99, p999, p9999, max, mean and pAll. (pAll is useful if you want to display in the same graph).
+{{< /alert >}}
 
 ## Metric Requirements
 

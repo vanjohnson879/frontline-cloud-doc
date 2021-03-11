@@ -48,8 +48,10 @@ If you want specific properties for a simulation, you will be allowed to ignore 
 
 ## Creating a simulation
 
-WARNING: FrontLine has a hard run duration limit of 7 days and will abort any test running for longer than that.
+{{< alert warning >}}
+FrontLine has a hard run duration limit of 7 days and will abort any test running for longer than that.
 This limit exists for both performance (data who grow too humongous to be presented in the dashboard) and security (forgotten test running forever) reasons.
+{{< /alert >}}
 
 In order to create a simulation click on the "Create" button in the simulations table. There are 6 steps to create a simulation, 3 of which are optional.
 
@@ -93,11 +95,15 @@ These steps allows you to defines JVM arguments and system properties used when 
 {{< img src="create-simulation4.png" alt="Create simulation - Step 4" >}}
 {{< img src="create-simulation5.png" alt="Create simulation - Step 5" >}}
 
-NOTE: JVM options and Java System Properties will be saved in a snapshot that will be available in the run. This information will be visible by anyone who has read access.
+{{< alert tip >}}
+JVM options and Java System Properties will be saved in a snapshot that will be available in the run. This information will be visible by anyone who has read access.
 You can exclude some properties from being copied if you prefix them with `sensitive.`.
+{{< /alert >}}
 
-NOTE: You can configure the `gatling.frontline.groupedDomains` System property to group connection stats from multiple subdomains and avoid memory issues when hitting a very large number of subdomains.
+{{< alert tip >}}
+You can configure the `gatling.frontline.groupedDomains` System property to group connection stats from multiple subdomains and avoid memory issues when hitting a very large number of subdomains.
 For example, setting this property as `.foo.com, .bar.com` will consolidate stats for `sub1.foo.com`, `sub2.foo.com`, `sub1.bar.com`, `sub2.bar.com` into `*****.foo.com` and `*****.bar.com`.
+{{< alert >}}
 
 ### Step 6: Time window
 
@@ -108,7 +114,9 @@ Configuring a ramp up or ramp down means that the start and end of your simulati
 - **Ramp Up**: the number of seconds you want to exclude at the beginning of the run.
 - **Ramp Down**: the number of seconds you want to exclude at the end of the run.
 
-NOTE: Ramps parameters will only be applied if the run duration is longer than the sum of the two.
+{{< alert tip >}}
+Ramps parameters will only be applied if the run duration is longer than the sum of the two.
+{{< /alert >}}
 
 ## Simulations table
 
@@ -281,7 +289,9 @@ Moreover, histograms and pies are hidden behind each counts charts, accessible b
 
 {{< img src="pie-button.png" alt="Pie button" >}}
 
-WARNING: If your kernel version is too low (around below 3.10) you might not be able to get data from the TCP connection by state graph on the Connections tab. If you want to be able to get these data, you should upgrade your kernel.
+{{< alert warning >}}
+If your kernel version is too low (around below 3.10) you might not be able to get data from the TCP connection by state graph on the Connections tab. If you want to be able to get these data, you should upgrade your kernel.
+{{< /alert >}}
 
 ### Summary (Requests and Groups only)
 

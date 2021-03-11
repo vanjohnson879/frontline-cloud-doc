@@ -145,15 +145,25 @@ libraryDependencies += "io.gatling.highcharts" % "gatling-charts-highcharts" % g
 libraryDependencies += "io.gatling"            % "gatling-test-framework"    % gatlingVersion % "test"
 ```
 
-WARNING: We only support sbt 1+, not sbt 0.13.
+{{< alert warning >}}
+We only support sbt 1+, not sbt 0.13.
+{{< /alert >}}
 
-WARNING: If you use the 'it' config, you have to use a custom build command as the defauit one is for the 'test' config: `sbt -J-Xss100M ;clean;it:assembly -batch --error`
+{{< alert warning >}}
+If you use the 'it' config, you have to use a custom build command as the defauit one is for the 'test' config: `sbt -J-Xss100M ;clean;it:assembly -batch --error`
+{{< /alert >}}
 
-WARNING: We recommend disabling Coursier for now. There are several bugs in the sbt/Coursier integration that makes our plugin work in a suboptimal fashion.
+{{< alert warning >}}
+We recommend disabling Coursier for now. There are several bugs in the sbt/Coursier integration that makes our plugin work in a suboptimal fashion.
+{{< /alert >}}
 
-INFO: The `gatling-test-framework`dependencies is only needed if you intend to run locally and use the gatling-sbt plugin.
+{{< alert tip >}}
+The `gatling-test-framework`dependencies is only needed if you intend to run locally and use the gatling-sbt plugin.
+{{< /alert >}}
 
-INFO: If you use very long method calls chains in your Gatling code, you might have to increase sbt's thread stack size:
+{{< alert tip >}}
+If you use very long method calls chains in your Gatling code, you might have to increase sbt's thread stack size:
+{{< /alert >}}
 
 ```bash
 $ export SBT_OPTS="-Xss100M"
@@ -172,7 +182,9 @@ addSbtPlugin("io.gatling.frontline" % "sbt-frontline" % "{frontLineSbtPluginVers
 
 You can run `sbt test:assembly` (or `sbt it:assembly` if you've configured the plugin for integration tests) in your terminal and check you get a jar containing all the dependencies of the simulation.
 
-INFO: The `gatling-sbt` is optional.
+{{< alert ip >}}
+The `gatling-sbt` is optional.
+{{< /alert >}}
 
 ### Gradle
 
@@ -245,7 +257,9 @@ Assuming a CSV file contains 1000 entries, and 3 Gatling nodes, the entries will
 - Second node will access the next 333 entries
 - Third node will access the last 334 entries
 
-NOTE: `shard` is available in Gatling OSS DSL but is a noop there. It's only effective when running tests with FrontLine.
+{{< alert tip >}}
+`shard` is available in Gatling OSS DSL but is a noop there. It's only effective when running tests with FrontLine.
+{{< /alert >}}
 
 ## Resolving Injector Location in Simulation
 
@@ -260,5 +274,7 @@ val poolName = System.getProperty("gatling.frontline.poolName")
 val baseUrl = if (poolName == "London") "https://domain.co.uk" else "https://domain.com"
 ```
 
-NOTE: This System property is only defined when deploying with FrontLine.
+{{< alert tip >}}
+This System property is only defined when deploying with FrontLine.
 It's not defined when running locally with any Gatling OSS launcher.
+{{< /alert >}}

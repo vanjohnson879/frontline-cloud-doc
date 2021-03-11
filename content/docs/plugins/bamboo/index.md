@@ -56,9 +56,13 @@ You can display the results of the Gatling FrontLine assertions with the JUnit P
 Add a new build task called __JUnit Parser__ and fill the __Specify custom results directories__ input with the following line: +
 `**/gatlingFrontLineJunitResults/*.xml`
 
-CAUTION: Be sure to place this task always after the GatlingFrontLine task, or it won't read the results of the new run.
+{{< alert danger >}}
+Be sure to place this task always after the GatlingFrontLine task, or it won't read the results of the new run.
+{{< /alert >}}
 
-CAUTION: If you don't have any assertions in your Gatling simulation, the JUnit task will fail.
+{{< alert danger >}}
+If you don't have any assertions in your Gatling simulation, the JUnit task will fail.
+{{< /alert >}}
 
 {{< img src="configuration-junit.png" alt="JUnit configuration" >}}
 

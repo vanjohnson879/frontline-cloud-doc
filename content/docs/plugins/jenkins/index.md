@@ -75,7 +75,9 @@ You can display the results of the Gatling FrontLine assertions with the JUnit p
 junit("gatlingFrontLineJunitResults/*.xml")
 ```
 
-CAUTION: If you don't have any assertions in your Gatling simulation, the JUnit step will fail.
+{{< alert danger >}}
+If you don't have any assertions in your Gatling simulation, the JUnit step will fail.
+{{< /alert >}}
 
 ### Set-up for an old style job
 
@@ -90,7 +92,9 @@ Add a new build step called **Publish JUnit test result report** and fill the **
 
 {{< img src="junit-configuration.png" alt="JUnit Configuration" >}}
 
-CAUTION: If you don't have any assertions in your Gatling simulation, the JUnit step will fail.
+{{< alert danger >}}
+If you don't have any assertions in your Gatling simulation, the JUnit step will fail.
+{{< /alert >}}
 
 ## Usage
 
