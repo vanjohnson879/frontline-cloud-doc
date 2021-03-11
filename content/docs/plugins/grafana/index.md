@@ -84,76 +84,113 @@ TIP: You can get the list of metrics and test the results via FrontLine's Swagge
 FrontLine offers a large amount of metrics:
 
 - **Requests metrics:**
-    - **req.<Percentiles>**: Response time percentiles metric.
-    - **requests**: Requests count per second.
-    - **responsesOk**: Responses OK count per second.
-    - **responsesKo**: Responses KO count per second.
-    - **responsesByStatus**: Requests count by status per second.
-    - **errors**: Erros count by error name per second.
+    - `req.<Percentiles>`: Response time percentiles metric.
+    - `requests`: Requests count per second.
+    - `responsesOk`: Responses OK count per second.
+    - `responsesKo`: Responses KO count per second.
+    - `responsesByStatus`: Requests count by status per second.
+    - `errors`: Errors count by error name per second.
 - **Group metrics:**
-    - **groupCumulated.<Percentiles>**: Group cumulated response time percentiles.
-    - **groupDuration.<Percentiles>**: Group duration percentiles metric.
-    - **groupCountsOk**: Group count OK per second.
-    - **groupCountsKo**: Group count KO per second.
+    - `groupCumulated.<Percentiles>`: Group cumulated response time percentiles.
+    - `groupDuration.<Percentiles>`: Group duration percentiles metric.
+    - `groupCountsOk`: Group count OK per second.
+    - `groupCountsKo`: Group count KO per second.
 - **Users metrics:**
-    - **usr+**: Users arrival count per second.
-    - **usr-**: Users temination count per second.
-    - **usrActive**: Concurrent users count per second.
+    - `usr+`: Users arrival count per second.
+    - `usr-`: Users temination count per second.
+    - `usrActive`: Concurrent users count per second.
 - **Injectors metrics:**
-    - **gcCount**: GC count per second.
-    - **gcTime**: GC time per second.
-    - **heapUsed**: Heap used in Mb.
-    - **heapMax**: Heap max in Mb.
-    - **heapCommitted**: Heap committed in Mb.
-    - **tcpSeg**: TCP events count per second.
-    - **tcpConn**: TCP connection events count per second.
-    - **cpuSys**: CPU system usage in percent.
-    - **cpuUser**: CPU user usage in percent.
+    - `gcCount`: GC count per second.
+    - `gcTime`: GC time per second.
+    - `heapUsed`: Heap used in Mb.
+    - `heapMax`: Heap max in Mb.
+    - `heapCommitted`: Heap committed in Mb.
+    - `tcpSeg`: TCP events count per second.
+    - `tcpConn`: TCP connection events count per second.
+    - `cpuSys`: CPU system usage in percent.
+    - `cpuUser`: CPU user usage in percent.
 - **Bandwidth metrics:**
-    - **bitsSent**: Bits sent per second.
-    - **bitsReceived**: Bits received per second.
+    - `bitsSent`: Bits sent per second.
+    - `bitsReceived`: Bits received per second.
 - **Connections metrics:**
-    - **connectionOpened**: Connection opened count per second.
-    - **connectionClosed**: Connection closed count per second.
-    - **connectionTcpState**: TCP connection count by state.
-    - **tcp.<Percentiles>**:  TCP connect duration percentiles metric.
-    - **tls.<Percentiles>**: TLS handshake duration percentiles metric.
+    - `connectionOpened`: Connection opened count per second.
+    - `connectionClosed`: Connection closed count per second.
+    - `connectionTcpState`: TCP connection count by state.
+    - `tcp.<Percentiles>`:  TCP connect duration percentiles metric.
+    - `tls.<Percentiles>`: TLS handshake duration percentiles metric.
 - **DNS metrics:**
-    - **dns.<Percentiles>**: DNS resolution duration percentiles metric.
+    - `dns.<Percentiles>`: DNS resolution duration percentiles metric.
 
 NOTE: <Percentiles> are: min, p25, p50, p75, p80, p85, p90, p95, p99, p999, p9999, max, mean and pAll. (pAll is useful if you want to display in the same graph).
 
 ## Metric Requirements
 
-| Metrics name                 | simulation   | scenario     | group        | request      | remote       | hostname     |injector      |scope           |
-|------------------------------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|----------------|
-| req.<Percentiles>            | icon:check[] | icon:check[] | icon:check[] | icon:check[] |              |              |              | icon:check[]   |
-| requests                     | icon:check[] | icon:check[] | icon:check[] | icon:check[] |              |              |              |                |
-| responsesOk                  | icon:check[] | icon:check[] | icon:check[] | icon:check[] |              |              |              |                |
-| responsesKo                  | icon:check[] | icon:check[] | icon:check[] | icon:check[] |              |              |              |                |
-| responsesByStatus            | icon:check[] | icon:check[] | icon:check[] | icon:check[] |              |              |              |                |
-| errors                       | icon:check[] | icon:check[] | icon:check[] | icon:check[] |              |              |              |                |
-| groupCumulated.<Percentiles> | icon:check[] | icon:check[] | icon:check[] |              |              |              |              | icon:check[]   |
-| groupDuration.<Percentiles>  | icon:check[] | icon:check[] | icon:check[] |              |              |              |              | icon:check[]   |
-| groupCountsOk                | icon:check[] | icon:check[] | icon:check[] |              |              |              |              |                |
-| groupCountsKo                | icon:check[] | icon:check[] | icon:check[] |              |              |              |              |                |
-| usr+                         | icon:check[] |              |              |              |              |              |              |                |
-| usr-                         | icon:check[] |              |              |              |              |              |              |                |
-| usrActive                    | icon:check[] |              |              |              |              |              |              |                |
-| gcCount                      | icon:check[] |              |              |              |              |              | icon:check[] |                |
-| gcTime                       | icon:check[] |              |              |              |              |              | icon:check[] |                |
-| heapUsed                     | icon:check[] |              |              |              |              |              | icon:check[] |                |
-| heapMax                      | icon:check[] |              |              |              |              |              | icon:check[] |                |
-| heapCommitted                | icon:check[] |              |              |              |              |              | icon:check[] |                |
-| tcpSeg                       | icon:check[] |              |              |              |              |              | icon:check[] |                |
-| tcpConn                      | icon:check[] |              |              |              |              |              | icon:check[] |                |
-| cpuSys                       | icon:check[] |              |              |              |              |              | icon:check[] |                |
-| cpuUser                      | icon:check[] |              |              |              |              |              | icon:check[] |                |
-| bitsSent                     | icon:check[] |              |              |              | icon:check[] |              |              |                |
-| bitsReceived                 | icon:check[] |              |              |              | icon:check[] |              |              |                |
-| connectionOpened             | icon:check[] |              |              |              | icon:check[] |              |              |                |
-| connectionClosed             | icon:check[] |              |              |              | icon:check[] |              |              |                |
-| connectionTcpState           | icon:check[] |              |              |              | icon:check[] |              |              |                |
-| tcp.<Percentiles>            | icon:check[] |              |              |              | icon:check[] |              |              | icon:check[]   |
-| tls.<Percentiles>            | icon:check[] |              |              |              | icon:check[] |              |              | icon:check[]   |
-| dns.<Percentiles>            | icon:check[] |              |              |              |              | icon:check[] |              | icon:check[]   |
+### Part 1
+
+| Metrics name                 | simulation         | scenario           | group              | request            |
+|------------------------------|--------------------|--------------------|--------------------|--------------------|
+| req.<Percentiles>            | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| requests                     | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| responsesOk                  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| responsesKo                  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| responsesByStatus            | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| errors                       | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| groupCumulated.<Percentiles> | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |
+| groupDuration.<Percentiles>  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |
+| groupCountsOk                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |
+| groupCountsKo                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |
+| usr+                         | :heavy_check_mark: |                    |                    |                    |
+| usr-                         | :heavy_check_mark: |                    |                    |                    |
+| usrActive                    | :heavy_check_mark: |                    |                    |                    |
+| gcCount                      | :heavy_check_mark: |                    |                    |                    |
+| gcTime                       | :heavy_check_mark: |                    |                    |                    |
+| heapUsed                     | :heavy_check_mark: |                    |                    |                    |
+| heapMax                      | :heavy_check_mark: |                    |                    |                    |
+| heapCommitted                | :heavy_check_mark: |                    |                    |                    |
+| tcpSeg                       | :heavy_check_mark: |                    |                    |                    |
+| tcpConn                      | :heavy_check_mark: |                    |                    |                    |
+| cpuSys                       | :heavy_check_mark: |                    |                    |                    |
+| cpuUser                      | :heavy_check_mark: |                    |                    |                    |
+| bitsSent                     | :heavy_check_mark: |                    |                    |                    |
+| bitsReceived                 | :heavy_check_mark: |                    |                    |                    |
+| connectionOpened             | :heavy_check_mark: |                    |                    |                    |
+| connectionClosed             | :heavy_check_mark: |                    |                    |                    |
+| connectionTcpState           | :heavy_check_mark: |                    |                    |                    |
+| tcp.<Percentiles>            | :heavy_check_mark: |                    |                    |                    |
+| tls.<Percentiles>            | :heavy_check_mark: |                    |                    |                    |
+| dns.<Percentiles>            | :heavy_check_mark: |                    |                    |                    |
+
+### Part 2
+
+| Metrics name                 | remote             | hostname           | injector           | scope              |
+-------------------------------|--------------------|--------------------|--------------------|--------------------|
+| req.<Percentiles>            |                    |                    |                    | :heavy_check_mark: |
+| requests                     |                    |                    |                    |                    |
+| responsesOk                  |                    |                    |                    |                    |
+| responsesKo                  |                    |                    |                    |                    |
+| responsesByStatus            |                    |                    |                    |                    |
+| errors                       |                    |                    |                    |                    |
+| groupCumulated.<Percentiles> |                    |                    |                    | :heavy_check_mark: |
+| groupDuration.<Percentiles>  |                    |                    |                    | :heavy_check_mark: |
+| groupCountsOk                |                    |                    |                    |                    |
+| groupCountsKo                |                    |                    |                    |                    |
+| usr+                         |                    |                    |                    |                    |
+| usr-                         |                    |                    |                    |                    |
+| usrActive                    |                    |                    |                    |                    |
+| gcCount                      |                    |                    | :heavy_check_mark: |                    |
+| gcTime                       |                    |                    | :heavy_check_mark: |                    |
+| heapUsed                     |                    |                    | :heavy_check_mark: |                    |
+| heapMax                      |                    |                    | :heavy_check_mark: |                    |
+| heapCommitted                |                    |                    | :heavy_check_mark: |                    |
+| tcpSeg                       |                    |                    | :heavy_check_mark: |                    |
+| tcpConn                      |                    |                    | :heavy_check_mark: |                    |
+| cpuSys                       |                    |                    | :heavy_check_mark: |                    |
+| cpuUser                      |                    |                    | :heavy_check_mark: |                    |
+| bitsSent                     | :heavy_check_mark: |                    |                    |                    |
+| bitsReceived                 | :heavy_check_mark: |                    |                    |                    |
+| connectionOpened             | :heavy_check_mark: |                    |                    |                    |
+| connectionClosed             | :heavy_check_mark: |                    |                    |                    |
+| connectionTcpState           | :heavy_check_mark: |                    |                    |                    |
+| tcp.<Percentiles>            | :heavy_check_mark: |                    |                    | :heavy_check_mark: |
+| tls.<Percentiles>            | :heavy_check_mark: |                    |                    | :heavy_check_mark: |
+| dns.<Percentiles>            |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
