@@ -12,25 +12,25 @@ menu:
 weight: 030
 ---
 
-== Purpose of this plugin
+## Purpose of this plugin
 
 This plugin enables you to start a Gatling FrontLine simulation directly from your Bamboo platform. This plugin links a Bamboo job with one Gatling FrontLine simulation. +
 
 This plugin doesn't create a new Gatling FrontLine simulation, you have to create it using the FrontLine Dashboard before.
 
-== Installation
+## Installation
 
 To download the plugin, you need to get the jar file located at:
 
-----
+```
 https://downloads.gatling.io/releases/frontline-bamboo-plugin/REPLACE_WITH_LATEST_FRONTLINE_VERSION/frontline-bamboo-plugin-REPLACE_WITH_LATEST_FRONTLINE_VERSION.jar
-----
+```
 
 You need to be connected as an administrator of your Bamboo application to install it. Go *Bamboo Administration*, *Manage Apps*, *Upload app*, and choose the jar file.
 
 {{< img src="installation.png" alt="Installation" >}}
 
-== Configuration
+## Configuration
 
 The plugin needs some global configuration. Go to __Administration__, then __Global variables__.
 
@@ -41,15 +41,15 @@ Add two new variables:
 
 {{< img src="global-variable.png" alt="Global variable" >}}
 
-== Job set-up
+## Job set-up
 
-=== Job configuration
+### Job configuration
 
 Add a new build task called __Gatling FrontLine__. Choose in the FrontLine Simulation list the simulation you want to use.
 
 {{< img src="configuration-task.png" alt="Task configuration" >}}
 
-=== JUnit reporting
+### JUnit reporting
 
 You can display the results of the Gatling FrontLine assertions with the JUnit Parser plugin.
 
@@ -62,7 +62,7 @@ CAUTION: If you don't have any assertions in your Gatling simulation, the JUnit 
 
 {{< img src="configuration-junit.png" alt="JUnit configuration" >}}
 
-== Usage
+## Usage
 
 A new Gatling FrontLine simulation will be started every time the job is run. Check the logs to check the simulation progress. If the simulation ran successfully, it will look like the following:
 
