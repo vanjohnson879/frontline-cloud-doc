@@ -19,7 +19,7 @@ To access the Teams administration, click on **Admin** in the navigation bar, an
 {{< img src="teams.png" alt="Teams" >}}
 
 In the teams table, you can visualize the team name, the optional team quota, and the number of associated users, artifacts and simulations.
-You can also copy the team id by clicking on the icon:clipboard[] icon.
+You can also copy the team id by clicking on the {{< icon clipboard >}} icon.
 
 ### Teams settings
 
@@ -37,5 +37,5 @@ To create a team, click on the **Create** button.
 
 {{< img src="create-team.png" alt="Creating a team" caption="Creating a team" >}}
 
-You can edit the team by clicking on the icon:pencil-alt[] icon and delete them using the checkboxes on the table's right part.
+You can edit the team by clicking on the {{< icon pencil-alt >}} icon and delete them using the checkboxes on the table's right part.
 Note that you can't edit a quota from this modal, it can only be done from the team settings modal.

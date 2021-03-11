@@ -28,7 +28,7 @@ You need to give 3 parameters to the script:
 
 - frontLine url: address of your FrontLine, for example: http://my-frontline
 - api token: FrontLine API token created with permission **All**. To fetch the API Token, refer to the section Managing API Tokens in the FrontLine User Guide.
-- simulation id: id of the simulation you want to start. You can get this id on the simulation table, with the icon:clipboard[] icon.
+- simulation id: id of the simulation you want to start. You can get this id on the simulation table, with the {{< icon clipboard >}} icon.
 
 ## Script
 

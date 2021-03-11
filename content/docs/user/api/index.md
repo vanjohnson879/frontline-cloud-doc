@@ -25,7 +25,7 @@ You can access the Swagger documentation using the link `FrontLine API documenta
 Some information before using the public API:
 
 - Simulations ID are available on the Simulations Table, at the left of the simulation name.
-- Runs ID are available on the Runs Table: `Simulations > Runs history`. To copy the id, click on the icon:clipboard[] icon at the right of the run number.
+- Runs ID are available on the Runs Table: `Simulations > Runs history`. To copy the id, click on the {{< icon clipboard >}} icon at the right of the run number.
 - You can retrieve a team ID by clicking on the ID column inside the teams table.
 - You have to provide the run ID as a query parameter to fetch other run metadata (injectors, remotes, hostnames, scenarios, groups, requests)
 - The `from` and `to` query parameters from the `/series` endpoint are the lower and upper timestamp bounds of the time window you want to query. You can fetch the total run time window from the `/runs` endpoint (injectStart, injectEnd).

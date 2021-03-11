@@ -28,5 +28,5 @@ There are three permissions available for an API Token:
 - The Read permission, allowing to read all the data from runs (typically useful in Grafana)
 - The All permission, combining both of the previous permissions
 
-You can edit the API Token permissions by clicking on the icon:pencil-alt[] icon on the right part of the table. A permission can be set globally or to a specific team.
-To regenerate a token, click on the icon:undo[] icon.
+You can edit the API Token permissions by clicking on the {{< icon pencil-alt >}} icon on the right part of the table. A permission can be set globally or to a specific team.
+To regenerate a token, click on the {{< icon undo >}} icon.

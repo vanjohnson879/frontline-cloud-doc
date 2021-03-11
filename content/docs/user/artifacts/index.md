@@ -30,7 +30,7 @@ FrontLine Cloud private beta is limited to 5 artifacts
 
 ## Upload
 
-In order to filled the artifact with your bundled simulation, click on the icon:upload[] icon on the right side of the table.
+In order to filled the artifact with your bundled simulation, click on the {{< icon upload >}} icon on the right side of the table.
 
 {{< img src="artifact-upload-empty.png" alt="Artifact upload empty" >}}
 

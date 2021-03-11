@@ -120,7 +120,7 @@ Ramps parameters will only be applied if the run duration is longer than the sum
 
 ## Simulations table
 
-Now that you have created a simulation, you can start it by clicking on the icon:play[] icon in the **Start** column of the table.
+Now that you have created a simulation, you can start it by clicking on the {{< icon play >}} icon in the **Start** column of the table.
 
 {{< img src="start.png" alt="Start" >}}
 
@@ -132,29 +132,29 @@ A run have the following life cycle:
 
 {{< img src="injecting.png" alt="Injecting" >}}
 
-By clicking on the icon:file-alt[] icon in the **Build Start** column, Frontline will display the build logs of the simulation. There is a limit of 1000 logs for a run.
+By clicking on the {{< icon file-alt >}} icon in the **Build Start** column, Frontline will display the build logs of the simulation. There is a limit of 1000 logs for a run.
 
 {{< img src="logs.png" alt="Logs" >}}
 
-You can click on the icon:search[] icon next to the status (if there is one) to display the assertions of the run.
+You can click on the {{< icon search >}} icon next to the status (if there is one) to display the assertions of the run.
 Assertions are the assumptions made at the beginning of the simulation to be verified at the end:
 
 {{< img src="assertions.png" alt="Assertions" >}}
 
 ## Useful tips
 
-- You can edit the simulation by clicking on the icon:pencil-alt[] icon next to his name
+- You can edit the simulation by clicking on the {{< icon pencil-alt >}} icon next to his name
 - You can search a simulation by his name, or its team name
 - You can sort the simulations by any column except the **Start** one
 - A **Delete** button will appear on the action bar when you select a simulation, you will be able to delete all the selected simulations
 - When a simulation is running, you can abort the run by clicking on the Abort button
-- You can copy a simulation ID by clicking on the icon:clipboard[] icon next to his name
+- You can copy a simulation ID by clicking on the {{< icon clipboard >}} icon next to his name
 
 Be aware that deleting a simulation will delete all the associated runs.
 
 ## Run / Trends
 
-Runs list and trends can be accessed by clicking on the icon:history[] icon in the <<simulation-table, simulations table>>.
+Runs list and trends can be accessed by clicking on the {{< icon history >}} icon in the <<simulation-table, simulations table>>.
 
 This view contains the list of your simulation's runs which can be filtered by name and/or status and the Trends which are displaying information between those runs.
 {{< img src="run-trends.png" alt="Run trends" >}}
@@ -163,16 +163,16 @@ This view contains the list of your simulation's runs which can be filtered by n
 
 {{< img src="run-table.png" alt="Run table" >}}
 
-Like the result of the latest run in the <<simulation-table, simulations table>> you have access to the <<logs, logs>> of the run by clicking on the icon:file-alt[] icon and you can sort the table by each columns. The logs are only available for run which are not flagged as "Successful".
+Like the result of the latest run in the <<simulation-table, simulations table>> you have access to the <<logs, logs>> of the run by clicking on the {{< icon file-alt >}} icon and you can sort the table by each columns. The logs are only available for run which are not flagged as "Successful".
 
-If there is one, You can click on the icon:search[] icon next to the status to display the <<assertions, assertions>> of the run.
+If there is one, You can click on the {{< icon search >}} icon next to the status to display the <<assertions, assertions>> of the run.
 You can delete runs by selecting them and click on the **Delete** button in the action bar above the table.
 
-You can comment a run by clicking on the icon:comment-alt[] icon on the right side of the table.
+You can comment a run by clicking on the {{< icon comment-alt >}} icon on the right side of the table.
 
 {{< img src="comment.png" alt="Comment" >}}
 
-You can also click on the icon:info-circle[] icon to see a snapshot of the run configuration. The system properties beginning with `sensitive.` are not displayed.
+You can also click on the {{< icon info-circle >}} icon to see a snapshot of the run configuration. The system properties beginning with `sensitive.` are not displayed.
 
 {{< img src="snapshot.png" alt="Snapshot" >}}
 
@@ -200,7 +200,7 @@ You can chose how many runs will be compared by changing the limit (10, 25, 50, 
 
 ## Reports
 
-The reports can be accessed by clicking on the icon:chart-area[] icon in the <<simulation-table, simulation table>> or in the <<runs-table, runs table>>.
+The reports can be accessed by clicking on the {{< icon chart-area >}} icon in the <<simulation-table, simulation table>> or in the <<runs-table, runs table>>.
 
 
 This view introduce all the metrics available for a specific run.
@@ -237,7 +237,7 @@ You can change the time range with control buttons or by selecting a region on t
 
 The label below is used to display the status of the simulation (Ongoing, successful, timeout...).
 If your simulation has assertions, this label will be clickable to show the assertions results.
-You can comment the run run by clicking on the icon:comment-alt[] icon.
+You can comment the run run by clicking on the {{< icon comment-alt >}} icon.
 
 {{< img src="timeline-assertions.png" alt="Timeline assertions" >}}
 

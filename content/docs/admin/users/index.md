@@ -26,7 +26,7 @@ To create a user, click on the **Create** button and fill the user informations:
 
 {{< img src="users-create.png" alt="User creation" >}}
 
-You can edit the user by clicking on the icon:pencil-alt[] icon and delete them using the checkboxes on the table's right part.
+You can edit the user by clicking on the {{< icon pencil-alt >}} icon and delete them using the checkboxes on the table's right part.
 
 ## Permissions
 
@@ -37,14 +37,14 @@ There are 4 different user roles in FrontLine:
 - Tester
 - Viewer
 
-|                                          | Viewer       | Tester       | Team Admin   | System Admin |
-|------------------------------------------|:------------:|:------------:|:------------:|:------------:|
-| Access own profile                       | icon:check[] | icon:check[] | icon:check[] | icon:check[] |
-| Access Reports and Trends                | Own team     | Own team     | Own team     | Own team     |
-| Start Simulation                         |              | Own team     | Own team     | Own team     |
-| Generate Public Links                    |              | Own team     | Own team     | Own team     |
-| Create Simulation                        |              |              | Own team     | Own team     |
-| Administrate Artifacts                   |              |              | Own team     | Own team     |
-| Administrate API Tokens, Users and Teams |              |              |              | Own team     |
+|                                          | Viewer             | Tester             | Team Admin         | System Admin       |
+|------------------------------------------|:------------------:|:------------------:|:------------------:|:------------------:|
+| Access own profile                       | {{< icon check >}} | {{< icon check >}} | {{< icon check >}} | {{< icon check >}} |
+| Access Reports and Trends                | Own team           | Own team           | Own team           | Own team           |
+| Start Simulation                         |                    | Own team           | Own team           | Own team           |
+| Generate Public Links                    |                    | Own team           | Own team           | Own team           |
+| Create Simulation                        |                    |                    | Own team           | Own team           |
+| Administrate Artifacts                   |                    |                    | Own team           | Own team           |
+| Administrate API Tokens, Users and Teams |                    |                    |                    | Own team           |
 
 Each role can be global or team-specific.
