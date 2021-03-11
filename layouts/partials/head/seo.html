@@ -13,7 +13,6 @@
 {{ if .IsHome -}}
   <title>Redirecting to {{ .Site.Params.redirectTo }}</title>
   <meta http-equiv="refresh" content="0; URL={{ .Site.BaseURL }}{{ .Site.Params.redirectTo }}">
-  <link rel="canonical" href="{{ .Site.BaseURL }}{{ .Site.Params.redirectTo }}">
 {{ else -}}
   <title>{{ .Title }} {{ .Site.Params.titleSeparator }} {{ .Site.Params.title }}</title>
 {{ end -}}
@@ -32,6 +31,8 @@
   {{ if .Paginator.HasNext -}}
     <link rel="next" href="{{ .Paginator.Next.URL | absURL }}">
   {{ end -}}
+{{ else if .IsHome -}}
+  <link rel="canonical" href="{{ .Site.BaseURL }}{{ .Site.Params.redirectTo }}">
 {{ else -}}
   <link rel="canonical" href="{{ .Permalink }}">
 {{ end -}}
