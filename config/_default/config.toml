@@ -23,12 +23,20 @@ rel  = "sitemap"
 
 [markup]
   [markup.asciidocExt]
-    extensions = ["asciidoctor-html5s"]
     preserveTOC = false
     [markup.asciidocExt.attributes]
-      toc = true
-      iconfont-name = "font-awesome"
-      icons = "font"
+      "docinfo" = "shared"
+      "experimental" = "true"
+      "figure-caption!" = ""
+      "icons" = "font"
+      "iconfont-name" = "font-awesome"
+      "nofooter" = ""
+      "sectlinks" = ""
+      "sectanchors" = ""
+      "skip-front-matter" = ""
+      "source-highlighter" = "highlightjs"
+      "toc" = "true"
+      "toc-title!" = ""
   [markup.goldmark]
     [markup.goldmark.extensions]
       linkify = false
