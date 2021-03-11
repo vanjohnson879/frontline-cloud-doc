@@ -19,6 +19,7 @@ module.exports = {
         'th',
         'td',
         ...whitelister([
+          './assets/scss/components/_alerts.scss',
           './assets/scss/components/_code.scss',
           './assets/scss/components/_search.scss',
           './assets/scss/components/_syntax.scss',

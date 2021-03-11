@@ -34,7 +34,7 @@
   color: #721c24;
 }
 
-.dark .alert-danger {
+body.dark .alert-danger {
   border-left: .5em solid darken(#882d31, 10);
   background-color: #882d31;
   color: inherit;
@@ -46,7 +46,7 @@
   color: #0c5460;
 }
 
-.dark .alert-tip {
+body.dark .alert-tip {
   border-left: .5em solid darken(#106082, 10);
   background-color: #106082;
   color: inherit;
@@ -58,7 +58,7 @@
   color: #856404;
 }
 
-.dark .alert-warning {
+body.dark .alert-warning {
   border-left: .5em solid darken(#7f650a, 10);
   background-color: #7f650a;
   color: inherit;
