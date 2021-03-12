@@ -1,18 +1,31 @@
 import Clipboard from 'clipboard';
 
-var clipboard = new Clipboard('.btn-clipboard');
+var $codes = document.querySelectorAll('.highlight');
 
-clipboard.on('success', function(e) {
-    /*
-    console.info('Action:', e.action);
-    console.info('Text:', e.text);
-    console.info('Trigger:', e.trigger);
-    */
+function copyButton() {
+    var copy = document.createElement("button");
+    copy.className = "btn-clipboard btn btn-sm btn-link";
+    return copy;
+}
 
-    e.clearSelection();
-});
+function statusButton(parent) {
+    var status = document.createElement("span");
+    status.className = "copy-status";
+    parent.append(status);
+}
 
-clipboard.on('error', function(e) {
-    console.error('Action:', e.action);
-    console.error('Trigger:', e.trigger);
+function clipboardButton(element) {
+    var copy = copyButton();
+    statusButton(copy);
+    element.prepend(copy);
+}
+
+for (var i = 0, len = $codes.length; i < len; i++) {
+    clipboardButton($codes[i]);
+}
+
+var clipboard = new Clipboard('.btn-clipboard', {
+    target: function(trigger) {
+        return trigger.nextElementSibling;
+    }
 });
