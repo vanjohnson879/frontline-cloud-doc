@@ -32,4 +32,4 @@ You need to give 3 parameters to the script:
 
 ## Script
 
-It can be found [here](https://downloads.gatling.io/releases/frontline-ci-script/1.13.3/frontline-ci-script-1.13.3.zip)
+It can be found [here](https://downloads.gatling.io/releases/frontline-ci-script/{{< var revnumber >}}/frontline-ci-script-{{< var revnumber >}}.zip)

@@ -32,7 +32,7 @@ In your `pom.xml`, you have to add in:
   <dependency>
     <groupId>io.gatling.highcharts</groupId>
     <artifactId>gatling-charts-highcharts</artifactId>
-    <version>{gatlingVersion}</version>
+    <version>{{< var gatlingVersion >}}</version>
     <scope>test</scope>
   </dependency>
 </dependencies>
@@ -43,7 +43,7 @@ In your `pom.xml`, you have to add in:
   <plugins>
     <plugin>
       <artifactId>maven-jar-plugin</artifactId>
-      <version>{mavenJarPluginVersion}</version>
+      <version>{{< var mavenJarPluginVersion >}}</version>
     </plugin>
     <!-- so maven can compile your scala code -->
     <plugin>
@@ -77,7 +77,7 @@ In your `pom.xml`, you have to add in:
     <plugin>
       <groupId>io.gatling.frontline</groupId>
       <artifactId>frontline-maven-plugin</artifactId>
-      <version>{frontLineMavenPluginVersion}</version>
+      <version>{{< var frontLineMavenPluginVersion >}}</version>
       <executions>
         <execution>
           <goals>
@@ -99,7 +99,7 @@ You can also exclude dependencies you don't want to ship, eg:
 <plugin>
   <groupId>io.gatling.frontline</groupId>
   <artifactId>frontline-maven-plugin</artifactId>
-  <version>{frontLineMavenPluginVersion}</version>
+  <version>{{< var frontLineMavenPluginVersion >}}</version>
   <executions>
     <execution>
       <goals>
@@ -109,7 +109,7 @@ You can also exclude dependencies you don't want to ship, eg:
         <excludes>
           <exclude>
             <groupId>org.scalatest</groupId>
-            <artifactId>scalatest_{scalaMajorVersion}</artifactId>
+            <artifactId>scalatest_{{< var scalaMajorVersion >}}</artifactId>
           </exclude>
         </excludes>
       </configuration>
@@ -133,12 +133,12 @@ enablePlugins(GatlingPlugin, FrontLinePlugin)
 // If you want to package simulations from the 'it' scope instead
 // inConfig(IntegrationTest)(_root_.io.gatling.frontline.sbt.FrontLinePlugin.frontlineSettings(IntegrationTest))
 
-scalaVersion := "{scalaVersion}"
+scalaVersion := "{{< var scalaVersion >}}"
 scalacOptions := Seq(
   "-encoding", "UTF-8", "-target:jvm-1.8", "-deprecation",
   "-feature", "-unchecked", "-language:implicitConversions", "-language:postfixOps")
 
-val gatlingVersion = "{gatlingVersion}"
+val gatlingVersion = "{{< var gatlingVersion >}}"
 
 libraryDependencies += "io.gatling.highcharts" % "gatling-charts-highcharts" % gatlingVersion % "test"
 // only required if you intend to use the gatling-sbt plugin
@@ -175,9 +175,9 @@ You will also need the following lines in the `project/plugins.sbt` file:
 
 ```scala
 // only if you intend to use the gatling-sbt plugin for running Gatling locally
-addSbtPlugin("io.gatling" % "gatling-sbt" % "{gatlingSbtPluginVersion}")
+addSbtPlugin("io.gatling" % "gatling-sbt" % "{{< var gatlingSbtPluginVersion >}}")
 // so sbt can build a package for FrontLine
-addSbtPlugin("io.gatling.frontline" % "sbt-frontline" % "{frontLineSbtPluginVersion}")
+addSbtPlugin("io.gatling.frontline" % "sbt-frontline" % "{{< var frontLineSbtPluginVersion >}}")
 ```
 
 You can run `sbt test:assembly` (or `sbt it:assembly` if you've configured the plugin for integration tests) in your terminal and check you get a jar containing all the dependencies of the simulation.
@@ -199,7 +199,7 @@ A `build.gradle` file should look like this:
 ```groovy
 plugins {
     // The following line allows to load io.gatling.gradle plugin and directly apply it
-    id 'io.gatling.frontline.gradle' version '{frontLineGradlePluginVersion}'
+    id 'io.gatling.frontline.gradle' version '{{< var frontLineGradlePluginVersion >}}'
 }
 
 // This is needed to let io.gatling.gradle plugin to loads gatling as a dependency
@@ -209,7 +209,7 @@ repositories {
 }
 
 gatling {
-    toolVersion = '{gatlingVersion}'
+    toolVersion = '{{< var gatlingVersion >}}'
 }
 ```
 
