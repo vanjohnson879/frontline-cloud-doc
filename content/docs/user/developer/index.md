@@ -49,7 +49,7 @@ In your `pom.xml`, you have to add in:
     <plugin>
       <groupId>net.alchim31.maven</groupId>
       <artifactId>scala-maven-plugin</artifactId>
-      <version>{scalaMavenPluginVesrion)</version>
+      <version>{{< var scalaMavenPluginVersion >}}</version>
       <executions>
         <execution>
           <goals>
