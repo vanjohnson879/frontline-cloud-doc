@@ -94,7 +94,6 @@ You can run `mvn package -DskipTests` in your terminal and check you get a jar c
 
 You can also exclude dependencies you don't want to ship, eg:
 
-.pom.xml:
 ```xml
 <plugin>
   <groupId>io.gatling.frontline</groupId>
