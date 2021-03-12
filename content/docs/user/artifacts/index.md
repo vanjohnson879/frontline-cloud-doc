@@ -21,7 +21,6 @@ The Simulations view contains all the artifacts you have configured with the giv
 ## Creation
 
 In order to create a simulation click on the "Create" button in the simulations table.
-FrontLine Cloud private beta is limited to 5 artifacts
 
 {{< img src="artifact-create.png" alt="Artifact creation" >}}
 
