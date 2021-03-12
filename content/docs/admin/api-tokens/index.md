@@ -24,9 +24,13 @@ To create an API token, click on the **Create** button. Once the API token is cr
 
 There are three permissions available for an API Token:
 
-- The Start permission, allowing to start simulations (typically useful in a CI like Jenkins)
+- The Start permission, allowing to start simulations
 - The Read permission, allowing to read all the data from runs (typically useful in Grafana)
 - The All permission, combining both of the previous permissions
+
+{{< alert tip >}}
+The permission needed for our CI plugins is All.
+{{< /alert >}}
 
 You can edit the API Token permissions by clicking on the {{< icon pencil-alt >}} icon on the right part of the table. A permission can be set globally or to a specific team.
 To regenerate a token, click on the {{< icon undo >}} icon.
