@@ -21,7 +21,7 @@ Download and install link:http://grafana.org/download/[Grafana].
 The FrontLine datasource for Grafana is packaged as a zip bundle that you can found at this URL:
 
 ```
-https://downloads.gatling.io/releases/frontline-grafana-bundle/REPLACE_WITH_LATEST_FRONTLINE_VERSION/frontline-grafana-bundle-REPLACE_WITH_LATEST_FRONTLINE_VERSION-bundle.zip
+https://downloads.gatling.io/releases/frontline-grafana-bundle/1.13.3/frontline-grafana-bundle-1.13.3-bundle.zip
 ```
 
 You can install it using the grafana-cli:
@@ -45,7 +45,7 @@ If this link is missing in the side menu, it means that your current user does n
 |-----------|---------------------------------------------------------------------------------------|
 | Name      | The datasource name.                                                                  |
 | Default   | Should be checked if you want that datasource to be selected by default in new panels |
-| URL       | URL of your FrontLine server. Default port is 10542. Don't forget the http(s)://      |
+| URL       | URL of your FrontLine server, for example: https://demo-beta.gatling.io      |
 | Access    | Server  access via Grafana backend, Browser  access directly from browser.            |
 | Auth      | FrontLine datasource ignore these fields.                                             |
 | API Token | Token generated through the FrontLine dashboard.                                      |
@@ -59,7 +59,7 @@ Our team provides some dashboards that you can import if you don't want to bothe
 {{< /alert >}}
 
 {{< alert tip >}}
-Samples are in the `dashboardSamples` directory in your Grafana bundle.  +
+Samples are in the `dashboardSamples` directory in your Grafana bundle.
 They are built with a datasource named *FrontLine*. Make sure this datasource exists or modify the json file accordingly.
 {{< /alert >}}
 

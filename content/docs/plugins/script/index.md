@@ -26,10 +26,10 @@ jq is needed to run this script. It is a JSON processor available for download [
 
 You need to give 3 parameters to the script:
 
-- frontLine url: address of your FrontLine, for example: http://my-frontline
+- frontLine url: address of your FrontLine, for example: https://demo-beta.gatling.io
 - api token: FrontLine API token created with permission **All**. To fetch the API Token, refer to the section Managing API Tokens in the FrontLine User Guide.
 - simulation id: id of the simulation you want to start. You can get this id on the simulation table, with the {{< icon clipboard >}} icon.
 
 ## Script
 
-It can be found [here](https://downloads.gatling.io/releases/frontline-ci-script/{revnumber}/frontline-ci-script-{revnumber}.zip)
+It can be found [here](https://downloads.gatling.io/releases/frontline-ci-script/1.13.3/frontline-ci-script-1.13.3.zip)

@@ -14,7 +14,7 @@ weight: 020
 
 ## Purpose of this plugin
 
-This plugin allows you to start a Gatling FrontLine simulation directly from your TeamCity platform. This plugin links a TeamCity plan with one and only one Gatling FrontLine simulation. +
+This plugin allows you to start a Gatling FrontLine simulation directly from your TeamCity platform. This plugin links a TeamCity plan with one and only one Gatling FrontLine simulation.
 
 This plugin doesn't create a new Gatling FrontLine simulation, you have to create it manually before.
 
@@ -23,7 +23,7 @@ This plugin doesn't create a new Gatling FrontLine simulation, you have to creat
 To download the plugin, you need to get the zip file located at:
 
 ```
-https://downloads.gatling.io/releases/frontline-teamcity-plugin/REPLACE_WITH_LATEST_FRONTLINE_VERSION/frontline-teamcity-plugin-REPLACE_WITH_LATEST_FRONTLINE_VERSION.zip
+https://downloads.gatling.io/releases/frontline-teamcity-plugin/1.13.3/frontline-teamcity-plugin-1.13.3.zip
 ```
 
 You need to be connected as an administrator of your TeamCity application to install it. Go **Administration**, **Plugins List**, **Upload plugin zip**, and choose the downloaded zip file.
@@ -34,8 +34,9 @@ You need to be connected as an administrator of your TeamCity application to ins
 
 The plugin needs some global configuration. Go **Administration**, then **FrontLine**.
 
-The **Address** is the address of your FrontLine API, for example: http://my-website:10542. +
-The **API Token** will allow TeamCity to authenticate to Gatling FrontLine, without the need of a username or password. To fetch it, refer to the section *Managing API Tokens* in the FrontLine User Guide. +
+The **Address** is the address of your FrontLine, for example: https://demo-beta.gatling.io.
+
+The **API Token** will allow TeamCity to authenticate to Gatling FrontLine, without the need of a username or password. To fetch it, refer to the section *Managing API Tokens* in the FrontLine User Guide.
 
 {{< img src="administration.png" alt="" >}}
 
@@ -49,7 +50,8 @@ Add a new build step called **FrontLine Launcher**. Choose in the Simulation lis
 
 You can display the results of the Gatling FrontLine assertions as a JUnit Test.
 
-Add a new build feature called **XML report processing**. Choose **Ant JUnit** as report type, and enter in the **Monitoring rules** input the following line: +
+Add a new build feature called **XML report processing**. Choose **Ant JUnit** as report type, and enter in the **Monitoring rules** input the following line:
+
 `gatlingFrontLineJunitResults/*.xml`
 
 {{< img src="junit.png" alt="JUnit" >}}

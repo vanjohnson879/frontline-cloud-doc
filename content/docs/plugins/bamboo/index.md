@@ -14,7 +14,7 @@ weight: 030
 
 ## Purpose of this plugin
 
-This plugin enables you to start a Gatling FrontLine simulation directly from your Bamboo platform. This plugin links a Bamboo job with one Gatling FrontLine simulation. +
+This plugin enables you to start a Gatling FrontLine simulation directly from your Bamboo platform. This plugin links a Bamboo job with one Gatling FrontLine simulation.
 
 This plugin doesn't create a new Gatling FrontLine simulation, you have to create it using the FrontLine Dashboard before.
 
@@ -23,7 +23,7 @@ This plugin doesn't create a new Gatling FrontLine simulation, you have to creat
 To download the plugin, you need to get the jar file located at:
 
 ```
-https://downloads.gatling.io/releases/frontline-bamboo-plugin/REPLACE_WITH_LATEST_FRONTLINE_VERSION/frontline-bamboo-plugin-REPLACE_WITH_LATEST_FRONTLINE_VERSION.jar
+https://downloads.gatling.io/releases/frontline-bamboo-plugin/1.13.3/frontline-bamboo-plugin-1.13.3.jar
 ```
 
 You need to be connected as an administrator of your Bamboo application to install it. Go *Bamboo Administration*, *Manage Apps*, *Upload app*, and choose the jar file.
@@ -36,7 +36,7 @@ The plugin needs some global configuration. Go to __Administration__, then __Glo
 
 Add two new variables:
 
-* The first one is named __frontline.address__, and corresponds to the address of your FrontLine API.
+* The first one is named __frontline.address__, and corresponds to the address of your FrontLine, for example: https://demo-beta.gatling.io
 * The second one is named __frontline.apiTokenPassword__, and corresponds to the token needed to authenticate to Gatling FrontLine. To fetch it, refer to the section *Managing API Tokens* in the FrontLine User Guide.
 
 {{< img src="global-variable.png" alt="Global variable" >}}
@@ -53,7 +53,8 @@ Add a new build task called __Gatling FrontLine__. Choose in the FrontLine Simul
 
 You can display the results of the Gatling FrontLine assertions with the JUnit Parser plugin.
 
-Add a new build task called __JUnit Parser__ and fill the __Specify custom results directories__ input with the following line: +
+Add a new build task called __JUnit Parser__ and fill the __Specify custom results directories__ input with the following line:
+
 `**/gatlingFrontLineJunitResults/*.xml`
 
 {{< alert danger >}}

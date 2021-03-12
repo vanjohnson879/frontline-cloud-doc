@@ -14,7 +14,7 @@ weight: 010
 
 ## Purpose of this plugin
 
-This plugin enables you to start a Gatling FrontLine simulation directly from your Jenkins platform. This plugin links a Jenkins job with one and only one Gatling FrontLine simulation. +
+This plugin enables you to start a Gatling FrontLine simulation directly from your Jenkins platform. This plugin links a Jenkins job with one and only one Gatling FrontLine simulation.
 
 This plugin doesn't create a new Gatling FrontLine simulation, you have to create it using the FrontLine Dashboard before.
 
@@ -23,7 +23,7 @@ This plugin doesn't create a new Gatling FrontLine simulation, you have to creat
 To download the plugin, you need to get the hpi file located at:
 
 ```
-https://downloads.gatling.io/releases/frontline-jenkins-plugin/REPLACE_WITH_LATEST_FRONTLINE_VERSION/frontline-jenkins-plugin-REPLACE_WITH_LATEST_FRONTLINE_VERSION.hpi
+https://downloads.gatling.io/releases/frontline-jenkins-plugin/1.13.3/frontline-jenkins-plugin-1.13.3.hpi
 ```
 
 You need to be connected as an administrator of your Jenkins application to install it. Go **Manage Jenkins**, **Manage Plugins**, **Advanced**, **Upload Plugin**, and choose the hpi file.
@@ -34,10 +34,11 @@ You need to be connected as an administrator of your Jenkins application to inst
 
 The plugin needs some global configuration. Go **Manage Jenkins**, **Configure System**, then **Global FrontLine Plugin Configuration**.
 
-The **API Token** will allow Jenkins to authenticate to Gatling FrontLine. To fetch the API Token, refer to the section *Managing API Tokens* in the FrontLine User Guide. +
+The **API Token** will allow Jenkins to authenticate to Gatling FrontLine. To fetch the API Token, refer to the section *Managing API Tokens* in the FrontLine User Guide.
+
 You can configure the API Token globally in this page, or per CI project if each project has a API Token scoped on a specific team. We recommend storing the API Token in a secret text credential, but you can also copy the content of the API Token in the second field.
 
-The **Address** is the address of your FrontLine API, for example: http://my-website:10542. +
+The **Address** is the address of your FrontLine API, for example: https://demo-beta.gatling.io.
 
 {{< img src="global-configuration.png" alt="Global Configuration" >}}
 
@@ -87,7 +88,8 @@ Add a new build step called **FrontLine Plugin**. Choose in the Simulation list 
 
 You can display the results of the Gatling FrontLine assertions with the JUnit plugin.
 
-Add a new build step called **Publish JUnit test result report** and fill the **Test report XMLs** input with the following line: +
+Add a new build step called **Publish JUnit test result report** and fill the **Test report XMLs** input with the following line:
+
 `gatlingFrontLineJunitResults/*.xml`
 
 {{< img src="junit-configuration.png" alt="JUnit Configuration" >}}
