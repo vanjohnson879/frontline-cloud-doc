@@ -20,7 +20,7 @@ This script doesn’t create a new Gatling FrontLine simulation, you have to cre
 
 ## Requirement
 
-jq is needed to run this script. It is a JSON processor available for download here: https://stedolan.github.io/jq/download/.
+jq is needed to run this script. It is a JSON processor available for download [here](https://stedolan.github.io/jq/download/).
 
 ## Use
 
@@ -32,4 +32,4 @@ You need to give 3 parameters to the script:
 
 ## Script
 
-It can be found here: https://downloads.gatling.io/releases/frontline-ci-script/{revnumber}/frontline-ci-script-{revnumber}.zip
+It can be found [here](https://downloads.gatling.io/releases/frontline-ci-script/{revnumber}/frontline-ci-script-{revnumber}.zip)

@@ -20,6 +20,7 @@ You can click on the Documentation icon in the navigation bar on the bottom left
 
 ## Plugins Download
 
-If you want to download one of your official FrontLine plugin, please click on the Plugins icon in the navigation bar. For more informations about the plugins, please refer to our plugins guide: https://gatling.io/docs/frontline/FrontLine-Plugins-Guide.pdf
+If you want to download one of your official FrontLine plugin, please click on the Plugins icon in the navigation bar.
+For more informations about the plugins, please refer to our plugins guide, go the the [plugins guide](https://gatling.io/docs/frontline/FrontLine-Plugins-Guide.pdf).
 
 {{< img src="plugins-modal.png" alt="Plugins modal" >}}
