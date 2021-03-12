@@ -31,6 +31,10 @@ In order to create a simulation click on the "Create" button in the simulations 
 
 In order to filled the artifact with your bundled simulation, click on the {{< icon upload >}} icon on the right side of the table.
 
+{{< alert tip >}}
+  In order to package a bundle of your simulation, refer to the [Developer documentation](/docs/user/developer/).
+{{< / alert >}}
+
 {{< img src="artifact-upload-empty.png" alt="Artifact upload empty" >}}
 
 You can then drag and drop your artifact to filled the form and proceed to upload.
