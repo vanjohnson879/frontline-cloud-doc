@@ -187,6 +187,9 @@ body.dark code {
   background: $body-overlay-dark;
   color: $body-color-dark;
 }
+body.dark code .s {
+  color: $blue-300;
+}
 
 body.dark blockquote {
   border-left: 3px solid $border-dark;
