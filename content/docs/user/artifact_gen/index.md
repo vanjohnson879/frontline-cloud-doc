@@ -1,7 +1,7 @@
 ---
-title: "Developer"
-description: "Learn how to configure your projects and package it with Maven, SBT and Gradle."
-lead: "Configure and package your projects with Maven, SBT and Gradle."
+title: "Artifact Generation"
+description: "Learn how to generate an artifact for FrontLine from Gatling zip bundle or a maven, sbt or gradle project."
+lead: "Generate an artifact from your Gatling bundle or a maven, sbt or gradle project."
 date: 2021-03-08T13:50:32+01:00
 lastmod: 2021-03-08T13:50:32+01:00
 draft: false
@@ -12,20 +12,27 @@ menu:
 weight: 040
 ---
 
-## FrontLine Gatling Versions
+## Generating Artifacts for FrontLine
 
-FrontLine actually uses custom versions of the Gatling components. Those binaries are not open sources and their usage is restricted to FrontLine.
-When you'll be deploying tests with FrontLine, it will replace your Gatling OSS dependencies with their custom counterparts.
+FrontLine deploys packages containing your compiled Simulations and resources.
+Those packages have to be generated upstream.
+FrontLine is compatible with Gatling 3.3, 3.4 and 3.5.
 
-## Configuring Gatling Projects
+### Gatling zip bundle
 
-### Maven
+Please copy the [`artifact.sh`](https://raw.githubusercontent.com/gatling/gatling/master/gatling-bundle/src/universal/bin/artifact.sh) or [`artifact.bat`](https://raw.githubusercontent.com/gatling/gatling/master/gatling-bundle/src/universal/bin/artifact.bat) files in the `bin` directory of your Gatling unzipped bundle.
+Those files will be shipped in the bundle in a future official Gatling release.
 
-In your `pom.xml`, you have to add in:
+Please run the script matching your operating system and generate the `target/artifact.jar` file.
+You'll have to upload this file in the new [Artifacts section](/docs/user/artifacts_conf).
 
-- pull Gatling dependencies
-- add the maven plugin for Scala, so your code gets compiled
-- add the maven plugin for FrontLine, so it can package your code into a deployable artifact
+### Maven Project
+
+In your `pom.xml`, you have to add:
+
+- the Gatling dependencies
+- the maven plugin for Scala, so your code gets compiled
+- the maven plugin for FrontLine, so it can package your code into a deployable artifact
 
 ```xml
 <dependencies>
@@ -90,9 +97,11 @@ In your `pom.xml`, you have to add in:
 </build>
 ```
 
-You can run `mvn package -DskipTests` in your terminal and check you get a jar containing all the dependencies of the simulation.
+Please run the `mvn clean package -DskipTests` command  in your terminal and generate the `target/<artifactId>-<version>-shaded.jar` file.
+You'll have to upload this file in the new [Artifacts section](/docs/user/artifacts_conf).
 
-You can also exclude dependencies you don't want to ship, eg:
+{{< alert tip >}}
+You can also exclude dependencies you don't want to ship and make the artifact lighter, eg:
 
 ```xml
 <plugin>
@@ -117,12 +126,14 @@ You can also exclude dependencies you don't want to ship, eg:
 </plugin>
 ```
 
-### SBT
+{{< /alert >}}
 
-In a sbt project, you have to:
+### SBT Project
 
-- pull Gatling dependencies
-- add the sbt plugin for FrontLine, so it can package your code into a deployable artifact
+In a sbt project, you have to add:
+
+- Gatling dependencies
+- the sbt plugin for FrontLine, so it can package your code into a deployable artifact
 
 A `build.sbt` file should look like this:
 
@@ -179,13 +190,14 @@ addSbtPlugin("io.gatling" % "gatling-sbt" % "{{< var gatlingSbtPluginVersion >}}
 addSbtPlugin("io.gatling.frontline" % "sbt-frontline" % "{{< var frontLineSbtPluginVersion >}}")
 ```
 
-You can run `sbt test:assembly` (or `sbt it:assembly` if you've configured the plugin for integration tests) in your terminal and check you get a jar containing all the dependencies of the simulation.
+Please run the `sbt test:assembly` (or `sbt it:assembly` if you've configured the plugin for integration tests) command in your terminal and generate the `target/<artifactId>-<version>.jar` file.
+You'll have to upload this file in the new [Artifacts section](/docs/user/artifacts_conf).
 
 {{< alert ip >}}
 The `gatling-sbt` is optional.
 {{< /alert >}}
 
-### Gradle
+### Gradle Project
 
 In a Gradle project, you have to:
 
@@ -212,7 +224,8 @@ gatling {
 }
 ```
 
-You can run `gradle frontLineJar` in your terminal and check you get a jar containing all the dependencies of the simulation.
+Please run the `gradle frontLineJar` command in your terminal and generate the `build/libs/artifactId.jar` file.
+You'll have to upload this file in the new [Artifacts section](/docs/user/artifacts_conf).
 
 ### Multi-Module Support
 
@@ -236,9 +249,7 @@ val feeder = csv("src/test/resources/foo.csv")
 val feeder = csv("foo.csv")
 ```
 
-## Specific Gatling Features
-
-### Load Sharding
+## Load Sharding
 
 Injection rates and throttling rates are automatically distributed amongst nodes.
 
