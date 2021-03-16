@@ -21,7 +21,7 @@ FrontLine is composed of:
 - **Users**, manage users informations, teams and permissions - *accessible to system admin*
 - **Teams**, manage teams - *accessible to system admin*
 - **API Tokens**, manage token to access the API - *accessible to system admin*
-- **Artifacts**, manage simulations artifacts - **ccessible from test admin*
+- **Artifacts**, manage simulations artifacts - *accessible from test admin*
 - **Simulations**, manage simulations, runs and reports - *accessible from test admin*
 
 - **Plugins**, displaying all plugins downloads links
