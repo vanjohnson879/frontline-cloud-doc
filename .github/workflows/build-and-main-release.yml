@@ -1,11 +1,15 @@
-name: GitHub Pages
+name: build-and-main-release
 
-on: push
+on:
+  push:
+    branches:
+      - development
+      - main
+  pull_request:
 
 jobs:
-  deploy:
+  build-and-main-release:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
 
@@ -13,6 +17,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
+
+      - name: Cache NPM
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
