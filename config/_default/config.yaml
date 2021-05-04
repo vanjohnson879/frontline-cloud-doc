@@ -27,6 +27,11 @@ outputFormats:
     noUgly: true
     rel: sitemap
 
+minify:
+  tdewolff:
+    html:
+      keepWhitespace: true
+
 markup:
   goldmark:
     extensions:
