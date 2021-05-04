@@ -27,7 +27,7 @@ This folder contains a basic Gatling simulation which can be used with FrontLine
 You can check in the `build.gradle` files that this project uses a special `io.gatling.frontline.gradle` plugin to generate the artifact in the proper format.
 
 If you have some existing projects you want to use, you'll have to configure this plugin there too.
-If so, please have a look at the [Reference Documentation](/docs/user/artifact_gen/#gradle-project) for more information.
+If so, please have a look at the [Reference Documentation]({{< ref "../../reference/user/artifact_gen#gradle-project" >}}) for more information.
 
 ## Generate the artifact
 

@@ -10,7 +10,7 @@ In order to log in, you need an account with the same username as your GitHub ac
 
 If you're the root administrator, we've already created your account.
 
-Otherwise, please reach out to your root administrator to [create your account](/docs/admin/users/#administration).
+Otherwise, please reach out to your root administrator to [create your account]({{< ref "../../admin/users#managing-users" >}}).
 
 {{< img src="login-github.png" alt="Login button" >}}
 
@@ -18,7 +18,7 @@ Pressing the **Signup with GitHub** button will redirect you to GitHub, where yo
 
 You need to **authorize** it. We only ask access to your profile.
 
-{{< img src="login-github-oauth.png" alt="OAuth GitHub page"  >}}
+{{< img src="login-github-oauth.png" alt="OAuth GitHub page" >}}
 
 {{< alert danger >}}
 The GitHub authorization page is opened in a new tab. If no tab opened, make sure that your browser didn't block it.

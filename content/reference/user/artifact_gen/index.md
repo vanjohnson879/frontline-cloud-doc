@@ -19,7 +19,7 @@ Please copy the [`artifact.sh`](https://raw.githubusercontent.com/gatling/gatlin
 Those files will be shipped in the bundle in a future official Gatling release.
 
 Please run the script matching your operating system and generate the `target/artifact.jar` file.
-You'll have to upload this file in the new [Artifacts section](/docs/user/artifacts_conf).
+You'll have to upload this file in the new [Artifacts section]({{< ref "../artifact_conf" >}}).
 
 ### Maven Project
 
@@ -93,7 +93,7 @@ In your `pom.xml`, you have to add:
 ```
 
 Please run the `mvn clean package -DskipTests` command  in your terminal and generate the `target/<artifactId>-<version>-shaded.jar` file.
-You'll have to upload this file in the new [Artifacts section](/docs/user/artifacts_conf).
+You'll have to upload this file in the new [Artifacts section]({{< ref "../artifact_conf" >}}).
 
 {{< alert tip >}}
 You can also exclude dependencies you don't want to ship and make the artifact lighter, eg:
@@ -189,7 +189,7 @@ If you are using the integration test (`it`) configuration provided by the `gatl
 $ sbt it:assembly
 ```
 
-Either command will generate the `target/<artifactId>-<version>.jar` file, which you will then have to upload in the new [Artifacts section](/docs/user/artifacts_conf).
+Either command will generate the `target/<artifactId>-<version>.jar` file, which you will then have to upload in the new [Artifacts section]({{< ref "../artifact_conf" >}}).
 
 {{< alert warning >}}
 If you use very long method calls chains in your Gatling code, you might have to increase sbt's thread stack size before you can run the `assembly` command:
@@ -226,7 +226,7 @@ gatling {
 ```
 
 Please run the `gradle frontLineJar` command in your terminal and generate the `build/libs/artifactId.jar` file.
-You'll have to upload this file in the new [Artifacts section](/docs/user/artifacts_conf).
+You'll have to upload this file in the new [Artifacts section]({{< ref "../artifact_conf" >}}).
 
 ### Multi-Module Support
 

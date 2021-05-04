@@ -9,7 +9,7 @@ weight: 10080
 
 ## Reports
 
-The reports can be accessed by clicking on the {{< icon chart-area >}} icon in the [simulations table]({{< ref "#simulations-table" >}}) or in the [runs table]({{< ref "#runs-table" >}}).
+The reports can be accessed by clicking on the {{< icon chart-area >}} icon in the [simulations table]({{< ref "../simulations#simulations-table" >}}) or in the [runs table]({{< ref "../trends#runs-table" >}}).
 
 This view introduce all the metrics available for a specific run.
 This page consists of:
@@ -19,7 +19,7 @@ This page consists of:
 - [Tabs]({{< ref "#tabs" >}})
 - [The run bar]({{< ref "#run-bar" >}})
 - [Charts area]({{< ref "#charts" >}})
-- [The summary]({{< ref "#summary-requests-and-groups-only" >}}) (only for requests and groups tabs)
+- [The summary]({{< ref "#summary" >}}) (only for requests and groups tabs)
 - [Export PDF]({{< ref "#export-pdf" >}})
 
 {{< img src="reports.png" alt="Reports" >}}
@@ -63,7 +63,7 @@ This bar is a combination of buttons:
 - **Start / Abort**: Use this button to start a new run of the simulation, or stop the ongoing run (not available if you have a Viewer permission)
 - **Grafana**: Link to the Grafana dashboard if you have filled in the configuration in frontline.conf
 - **Generate public link**: To create a public link
-- **Switch to Summary**: Switch to [summary]({{< ref "#summary-requests-and-groups-only" >}}) view for Requests & Groups tabs
+- **Switch to Summary**: Switch to [summary]({{< ref "../reports#summary" >}}) view for Requests & Groups tabs
 - buttons to filter the metrics drawn in the charts area
 
 {{< img src="run-bar.png" alt="Run bar" >}}
@@ -101,7 +101,7 @@ Moreover, histograms and pies are hidden behind each counts charts, accessible b
 If your kernel version is too low (around below 3.10) you might not be able to get data from the TCP connection by state graph on the Connections tab. If you want to be able to get these data, you should upgrade your kernel.
 {{< /alert >}}
 
-### Summary (Requests and Groups only)
+### Summary (Requests and Groups only) {#summary}
 
 This view is available only from requests and groups tabs.
 It is a summary of metrics drawn in the charts, and has two modes: flat, by default, and hierarchy.

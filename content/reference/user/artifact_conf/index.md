@@ -19,7 +19,7 @@ Gatling version of the artifact is displayed in a badge next to the filename.
 
 {{< alert tip >}}
 Artifacts uploaded before the upload validation has been implemented may have a "corrupted" badge:
-check how to [generate an artifact](/docs/user/artifact_gen/), and upload it again.
+check how to [generate an artifact]({{< ref "../artifact_gen" >}}), and upload it again.
 {{< / alert >}}
 
 ## Creation
@@ -38,7 +38,7 @@ In order to create a simulation click on the "Create" button in the simulations 
 In order to fill the artifact with your bundled simulation, click on the {{< icon upload >}} icon on the right side of the table.
 
 {{< alert tip >}}
-  In order to package a bundle of your simulation, refer to the [Developer documentation](/docs/user/artifact_gen/).
+In order to package a bundle of your simulation, refer to the [Developer documentation]({{< ref "../artifact_gen" >}}).
 {{< / alert >}}
 
 {{< img src="artifact-upload-empty.png" alt="Artifact upload empty" >}}
@@ -57,7 +57,7 @@ You can upload multiple artifact concurrently, progress can be tracked from anyw
 You can also upload artifacts programmatically with our REST API.
 
 You'll need:
-* an [API token]({{< ref "/docs/admin/api-tokens" >}}) with at least the `Artifacts` permission
+* an [API token]({{< ref "../../admin/api_tokens" >}}) with at least the `Artifacts` permission
 * the Artifact's ID you can copy from the WebUI.
 
 You can then upload your artifact, eg with `curl`:
