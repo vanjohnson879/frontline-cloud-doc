@@ -15,7 +15,11 @@
 .metals
 
 # Theme
-functions
 node_modules
 public
 resources
+
+# Hugo
+package.json
+package-lock.json
+go.sum
