@@ -33,7 +33,7 @@ If so, please have a look at the [Reference Documentation]({{< ref "../../refere
 
 Open a terminal in the maven folder and execute the following command to create an artifact:
 
-```shell
+```console
 mvn clean package -DskipTests
 ```
 

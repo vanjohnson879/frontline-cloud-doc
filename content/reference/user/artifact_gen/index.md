@@ -179,14 +179,14 @@ To package your code, please run one of the following commands in your terminal.
 
 In general (typically, your Gatling simulations are written inside the `src/test/scala` directory):
 
-```bash
-$ sbt test:assembly
+```console
+sbt test:assembly
 ```
 
 If you are using the integration test (`it`) configuration provided by the `gatling-sbt` plugin (typically, your Gatling simulations are written inside the `src/it/scala` directory):
 
-```bash
-$ sbt it:assembly
+```console
+sbt it:assembly
 ```
 
 Either command will generate the `target/<artifactId>-<version>.jar` file, which you will then have to upload in the new [Artifacts section]({{< ref "../artifact_conf" >}}).
@@ -194,7 +194,7 @@ Either command will generate the `target/<artifactId>-<version>.jar` file, which
 {{< alert warning >}}
 If you use very long method calls chains in your Gatling code, you might have to increase sbt's thread stack size before you can run the `assembly` command:
 ```bash
-$ export SBT_OPTS="-Xss100M"
+export SBT_OPTS="-Xss100M"
 ```
 {{< /alert >}}
 

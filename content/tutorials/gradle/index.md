@@ -33,7 +33,7 @@ If so, please have a look at the [Reference Documentation]({{< ref "../../refere
 
 Open a terminal in the gradle folder and execute the following command to create an artifact:
 
-```shell
+```console
 gradle frontLineJar
 ```
 
