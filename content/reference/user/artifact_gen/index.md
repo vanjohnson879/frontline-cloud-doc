@@ -210,18 +210,18 @@ A `build.gradle` file should look like this:
 .build.gradle:
 ```groovy
 plugins {
-    // The following line allows to load io.gatling.gradle plugin and directly apply it
-    id 'io.gatling.frontline.gradle' version '{{< var frontLineGradlePluginVersion >}}'
+  // The following line allows to load io.gatling.gradle plugin and directly apply it
+  id 'io.gatling.frontline.gradle' version '{{< var frontLineGradlePluginVersion >}}'
 }
 
 // This is needed to let io.gatling.gradle plugin to loads gatling as a dependency
 repositories {
-    jcenter()
-    mavenCentral()
+  jcenter()
+  mavenCentral()
 }
 
 gatling {
-    toolVersion = '{{< var gatlingVersion >}}'
+  toolVersion = '{{< var gatlingVersion >}}'
 }
 ```
 
