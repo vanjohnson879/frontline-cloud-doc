@@ -1,12 +1,8 @@
 main:
-  - name: Reference
-    url: /reference/
-    weight: 10
-
-  - name: Tutorials
-    weight: 20
-    identifier: tutorials
-    url: /tutorials/
+  - name: Cloud
+    identifier: cloud
+    url: reference/current
+    weight: 30
 
 social:
   - name: Twitter
@@ -19,7 +15,6 @@ social:
       20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
     url: 'https://twitter.com/GatlingTool'
     weight: 10
-
   - name: GitHub
     pre: >-
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0
