@@ -7,8 +7,6 @@ lastmod: 2021-03-10T09:29:43-05:00
 weight: 10080
 ---
 
-## Reports
-
 The reports can be accessed by clicking on the {{< icon chart-area >}} icon in the [simulations table]({{< ref "../simulations#simulations-table" >}}) or in the [runs table]({{< ref "../trends#runs-table" >}}).
 
 This view introduce all the metrics available for a specific run.
@@ -168,7 +166,7 @@ There are two more actions you can do:
 
 ### Useful Tips
 
-### Zoom
+#### Zoom
 
 You can reset zoom by double clicking on a chart.
 It is possible to change the time range window by the following actions:
@@ -177,31 +175,31 @@ It is possible to change the time range window by the following actions:
 - Select a zone in any charts and timeline
 - Select a range time from the top navigation bar
 
-### Markers
+#### Markers
 
 To ease your analysis, you can create markers on all the charts by right clicking on them. And click on the top of the marker to delete it.
 
 {{< img src="marker.png" alt="Marker" >}}
 
-### Multiple Highlights
+#### Multiple Highlights
 
 In the top right menu, you can activate the *Multiple Highlights* setting which allows the tooltip to be displayed on every chart at the same time.
 
 {{< img src="multiplecheck.png" alt="Multiple check" >}}
 {{< img src="multiple.png" alt="Multiple" >}}
 
-### Percentiles Mask
+#### Percentiles Mask
 
 In the top right menu, you can click on the **Percentiles** setting to be able to chose what percentiles to display in the chart.
 
 {{< img src="percentilesmask.png" alt="Percentiles mask" >}}
 {{< img src="percentileschart.png" alt="Percentiles chart" >}}
 
-### Date Time / Elapsed Time
+#### Date Time / Elapsed Time
 
 In the top right menu, you can activate the **Date Time** setting to be able to switch from elapsed time to date time.
 
-### Highlight Legend
+#### Highlight Legend
 
 By hovering the label on the percentiles chart legend, you will be able to highlight the curve on the chart, leading to a better view of that curve.
 The highlight legend options is enable to every "non stacked" graph.
