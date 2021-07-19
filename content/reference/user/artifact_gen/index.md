@@ -134,10 +134,6 @@ In a sbt project, you have to add:
 We only support sbt 1+, not sbt 0.13.
 {{< /alert >}}
 
-{{< alert warning >}}
-We recommend disabling Coursier for now. There are several bugs in the sbt/Coursier integration that make our plugin work in a suboptimal fashion.
-{{< /alert >}}
-
 Your `build.sbt` file should look like this:
 
 ```scala
