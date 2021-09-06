@@ -58,7 +58,7 @@ One last thing, new [organizations]({{< ref "../../reference/user/organization" 
 ## Step 2 - Download the Gatling bundle {#download-gatling-bundle}
 
 {{< alert tip >}}
-If you already know about Gatling and/or you are using a Gradle/Maven/SBT project, you can directly skip to the [generate a package]({{< ref "#step-3-generate-package" >}}) section.
+If you already know about Gatling and/or you are using a Gradle/Maven/SBT project, you can directly skip to the [generate a package]({{< ref "#generate-package" >}}) section.
 {{< /alert >}}
 
 Click [here](https://gatling.io/open-source/#downloadgatling) to download the latest version of the Gatling bundle and extract the archive.
