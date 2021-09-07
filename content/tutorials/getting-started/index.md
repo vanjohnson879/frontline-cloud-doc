@@ -44,7 +44,7 @@ A user can be part of either a team within an organization or have access to the
 {{< loom "a60f7e69b5044fc5bbfe5d5c2219ddb3" >}}
 
 {{< alert warning >}}
-Be careful with this step as your account can not be connected to multiple organizations. If you want to join an existing organization, please reach out to a system administrator of your team for you to be added.
+Be careful with this step as your account cannot be connected to multiple organizations. If you want to join an existing organization, please reach out to a system administrator of your team for you to be added.
 {{< /alert >}}
 
 **If you have been added to an organization by a System Administrator already.**
