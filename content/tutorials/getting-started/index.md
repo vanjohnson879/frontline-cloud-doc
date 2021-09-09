@@ -192,11 +192,11 @@ sbt: sbt test:assembly
 
 The name of the package being:
 
-{{< code-toggle console >}}
+{{< code-toggle shell >}}
 bundle: target/artifact.jar
 gradle: build/libs/gradle.jar
-maven: target/<project_name>-<project_version>-shaded.jar
-sbt: target/<project_name>-<project_version>.jar
+maven: target/${project}-${version}-shaded.jar
+sbt: target/${project}-${version}.jar
 {{</ code-toggle >}}
 
 ## Step 4 - Upload the package {#upload-package}
@@ -211,11 +211,11 @@ Upload it to Gatling Enterprise, either by drag-and-dropping it to the modal, or
 
 When using other tools, the name of the package will differ:
 
-{{< code-toggle console >}}
+{{< code-toggle shell >}}
 bundle: target/artifact.jar
 gradle: build/libs/gradle.jar
-maven: target/${name_of_the_project}-1.0.0-shaded.jar
-sbt: target/${name_of_the_project}-1.0.0.jar
+maven: target/${project}-${version}-shaded.jar
+sbt: target/${project}-${version}.jar
 {{</ code-toggle >}}
 
 ## Step 5 - Create a simulation {#create-simulation}
