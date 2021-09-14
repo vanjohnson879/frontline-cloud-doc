@@ -50,7 +50,7 @@ A user can be part of either a team within an organization or have access to the
 
 **If you are the first person in your organization to join Gatling, sign up and create an account**. In this case, you will need to create an organization:
 
-{{< loom "a60f7e69b5044fc5bbfe5d5c2219ddb3" >}}
+{{< youtube IHVYt8GvfM0 >}}
 
 {{< alert warning >}}
 Be careful with this step as your account cannot be connected to multiple organizations. If you want to join an existing organization, please reach out to a system administrator of your team for you to be added.
@@ -80,7 +80,7 @@ Now, you can directly skip to the [generate a package]({{< ref "#generate-packag
 
 Click [here](https://gatling.io/open-source/#downloadgatling) to download the latest version of the Gatling bundle and extract the archive.
 
-{{< loom "c5d9c2663b6c440f94c51eeb04291337" >}}
+{{< youtube qdhLMwHlvhU >}}
 
 Taken from the [bundle structure documentation](https://gatling.io/docs/gatling/reference/current/general/bundle_structure/), we learn that the important parts of the bundle are as such:
 
@@ -179,7 +179,7 @@ Creating jar...done
 
 This script can also be clicked or double clicked from any file explorer. You'll see the result in the folder `target`, which should now have a file named `artifact.jar`.
 
-{{< loom "ca115b7607224376a2f6cefdb0cfc479" >}}
+{{< youtube _fq3giAIibw >}}
 
 When using other tools, the command to type and the name of the package will differ:
 
@@ -207,7 +207,7 @@ Next, upload the package you generated earlier by clicking on the cloud icon. Th
 
 Upload it to Gatling Enterprise, either by drag-and-dropping it to the modal, or by clicking on the modal to open the file manager.
 
-{{< loom "7511a5a75a8f4f61baf4987bdb6ec306" >}}
+{{< youtube V_ajFy-wC9w >}}
 
 When using other tools, the name of the package will differ:
 
@@ -232,13 +232,13 @@ Next, you'll need to select your package name. It is important to select the pac
 
 In the final step, you can choose where you want the injection to take place. Select a location, eg: "US East - N. Virginia (AWS)" and click on the "Save" button. The traffic in your simulation will be coming from the region you've selected. The three next steps are optional and you can learn more about them [here]({{< ref "../../reference/user/simulations/" >}}), but for now, let's just simply click "save".
 
-{{< loom "8f52e27d235c4a9c9b9c820055f7b3ac" >}}
+{{< youtube Y4aScJtXido >}}
 
 {{< alert tip >}}
 If you would like to write your own script as a first test, you can modify the BasicSimulation file in the space as shown in the video. If you would like to learn more about creating different types of tests and writing your own scripts check out the [Gatling Academy](https://gatling.io/academy/). Please bear in mind you get 5 credits for free but if your test needs more, it will stop before it should finish.
 {{< /alert >}}
 
-{{< loom "055f4f01d22e4d3fa65905819a719417" >}}
+{{< youtube Xj0FSo3Qgn0 >}}
 
 That's it, you have created your first simulation on Gatling Enterprise!
 
@@ -246,7 +246,7 @@ That's it, you have created your first simulation on Gatling Enterprise!
 
 You are now ready to start load testing. To start the simulation you have just created, click on the Start icon. As soon as the simulation is running ("injecting" but not during the building and deploying statuses), you will be able to access the report, even while it is building.
 
-{{< loom "e470b748187f4371995005282541ddd5" >}}
+{{< youtube SmljQFGLD3Y >}}
 
 Now that you know how to create and run a simulation on Gatling, we suggest you jump on to the tutorials Interface tour and get the most out of the [reports]({{< ref "../../reference/user/reports" >}}).
 
