@@ -31,8 +31,8 @@ The Reports page consists of:
 This bar is a combination of buttons including:
 
 - **Start / Stop**: Use this button to start a new run of the simulation, or stop the ongoing run (not available if you have a Viewer permission)
-- **Generate public link**: To create a [public link]({{< ref "../reports#public-links" >}}) that can be viewed by anyone it is sent to.
-- **Export**: To [export]({{< ref "../reports#export" >}}) reports
+- **Generate public link**: To create a [public link]({{< ref "#public-links" >}}) that can be viewed by anyone it is sent to.
+- **Export**: To [export]({{< ref "#export-pdf" >}}) reports
 
 {{< img src="run-bar.png" alt="Run bar" >}}
 
@@ -72,7 +72,7 @@ Each tab has the same structure except the summary that is available only for re
 
 This filter bar is a combination of buttons:
 
-- **Switch to Summary**: Switch to [summary]({{< ref "../reports#summary" >}}) view for Requests & Groups tabs
+- **Switch to Summary**: Switch to [summary]({{< ref "#summary" >}}) view for Requests & Groups tabs
 - buttons to filter the metrics displayed in the charts area
 
 {{< img src="filter-bar.png" alt="Filter bar" >}}
