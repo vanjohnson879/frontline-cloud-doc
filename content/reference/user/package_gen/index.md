@@ -184,13 +184,13 @@ To package your code, please run one of the following commands in your terminal.
 
 In general (typically, your Gatling simulations are written inside the `src/test/scala` directory):
 
-```console
+```shell
 sbt test:assembly
 ```
 
 If you are using the integration test (`it`) configuration provided by the `gatling-sbt` plugin (typically, your Gatling simulations are written inside the `src/it/scala` directory):
 
-```console
+```shell
 sbt it:assembly
 ```
 

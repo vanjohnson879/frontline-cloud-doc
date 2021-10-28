@@ -93,13 +93,13 @@ Inside Gatling, a *test* is called a *simulation*.
 
 You can test your installation by running your test locally. If Java is properly installed, you can enter the following command in your terminal, or open the `gatling.sh` (if Linux/MacOS) or `gatling.bat` (if Windows) in any file explorer:
 
-```console
+```
 $ ./bin/gatling.sh
 ```
 
 If working properly, you should see something like this:
 
-```console
+```
 GATLING_HOME is set to xxx/gatling-charts-highcharts-bundle-3.6.1
 Choose a simulation number:
      [0] computerdatabase.BasicSimulation
@@ -112,19 +112,19 @@ Choose a simulation number:
 
 So far we didn't create any test of our own but the Gatling bundle provides some example for you to start with. Here, the bundle is prompting you to choose one of the sample tests so it can run it. You can, for example, type `0`, after which the Gatling bundle will prompt you for an optional description of the test being run:
 
-```console
+```
 Select run description (optional)
 ```
 
 Finally, if everything is properly setup, you'll see that the test has started:
 
-```console
+```
 Simulation computerdatabase.BasicSimulation started...
 ```
 
 By default, Gatling works in console mode, outputting where the test is that every 5 seconds. After Gatling is done, you should see something like this:
 
-```console
+```
 Simulation computerdatabase.BasicSimulation completed in 23 seconds
 Parsing log file(s)...
 Parsing log file(s) done
@@ -167,7 +167,7 @@ Gatling Enterprise requires a package built from a Gatling project in order to r
 
 To create a package, run the `artifact.bat` (if Windows) or `artifact.sh` (if Linux/MacOS) file, Gatling will start creating your first package:
 
-```console
+```
 $ ./bin/artifact.sh
 GATLING_HOME is set to .../gatling-charts-highcharts-bundle-3.6.1
 GATLING_VERSION is set to '3.6.1'
