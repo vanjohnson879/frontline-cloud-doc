@@ -39,7 +39,7 @@ The [Gatling Enterprise API Token]({{< ref "../../admin/api_tokens" >}}) is need
 
 ## Plan set-up
 
-Add a new build step called **FrontLine Launcher**. Choose in the Simulation list the simulation you want to monitor. You need to configure the global properties of the plugin, and create at least a simulation on Gatling Enterprise to do this step.
+Add a new build step called **Gatling Enterprise Launcher**. Choose in the Simulation list the simulation you want to monitor. You need to configure the global properties of the plugin, and create at least a simulation on Gatling Enterprise to do this step.
 
 {{< img src="configuration.png" alt="Configuration" >}}
 

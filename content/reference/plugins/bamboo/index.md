@@ -53,7 +53,7 @@ Add a new build task called __JUnit Parser__ and fill the __Specify custom resul
 `**/gatlingFrontLineJunitResults/*.xml`
 
 {{< alert danger >}}
-Be sure to place this task always after the GatlingFrontLine task, or it won't read the results of the new run.
+Be sure to place this task always after the __Gatling Enterprise__ task, or it won't read the results of the new run.
 {{< /alert >}}
 
 {{< alert danger >}}

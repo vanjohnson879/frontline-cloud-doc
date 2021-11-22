@@ -27,11 +27,11 @@ You need to be connected as an administrator of your Jenkins application to inst
 
 ## Configuration
 
-The plugin needs some global configuration. Go **Manage Jenkins**, **Configure System**, then **Global FrontLine Plugin Configuration**.
+The plugin needs some global configuration. Go **Manage Jenkins**, **Configure System**, then **Global Gatling Enterprise Plugin Configuration**.
 
 The [API token]({{< ref "../../admin/api_tokens" >}}) will allow Jenkins to authenticate to Gatling Enterprise. The API token needs the All permission.
 
-You can configure the API Token globally in this page, or per CI project if each project has a API Token scoped on a specific team. We recommend storing the API Token in a secret text credential, but you can also copy the content of the API Token in the second field.
+You can configure the API Token globally in this page, or per CI project if each project has an API Token scoped on a specific team. We recommend storing the API Token in a secret text credential, but you can also copy the content of the API Token in the second field.
 
 The **Address** is the address of your Gatling Enterprise API, please enter: https://cloud.gatling.io.
 
