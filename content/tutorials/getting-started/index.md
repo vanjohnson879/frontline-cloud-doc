@@ -17,21 +17,21 @@ In this tutorial, we'll describe every step to help you run your first test with
 
 {{< alert info >}}
 **Requirements**
-* A Java Development Kit (JDK) installed in version 8 or 11
+* A Java Development Kit (JDK) installed in version 8, 11 or 17
 {{< /alert >}}
 
 {{< alert tip >}}
 **Recommendations**
 
 * The [Gatling bundle](https://gatling.io/open-source/#downloadgatling) is beginner-friendly and is the best choice if you're just getting started.
-* For long term projects, consider using a **Gradle**, **Maven** or **SBT** Gatling project. You can download some sample projects ready for Gatling Enterprise Cloud directly from the dashboard!
+* For long term projects, consider using a **Maven**, **Gradle** or **SBT** Gatling project. Please make sure to check the sample projects you can reach from the "Samples" button.
 {{< /alert >}}
 
 Gatling is a code based load testing tool. It is based on the Scala programming language and is an Open-Source project that is free to use! Gatling is used to power Gatling Enterprise in order to make it a full-fledged load testing tool with even more features, such as live reports, advanced metrics and large scale clustered tests. The tests you code with Gatling are compatible with Gatling Enterprise without any changes.
 
-Gatling requires a Java installation so make sure that you have a JDK 8 or 11 installed on your computer. [Adoptium](https://adoptium.net) provides good packages that contain everything you need.
+Gatling requires a Java installation so make sure that you have a JDK 8, 11 or 17 installed on your computer. [Azul System's Zulu](https://www.azul.com/downloads/?package=jdk) provides good packages that contain everything you need.
 
-While there are a lot of ways to create your first test, **if you are new to load testing or not a developer, we recommend using the Gatling bundle as it is beginner friendly**. It is self sufficient and doesn't require knowledge of the usual Java/Scala build tools, i.e. Gradle, Maven or SBT.
+While there are a lot of ways to create your first test, **if you are new to load testing or not a developer, we recommend using the Gatling bundle as it is beginner-friendly**. It is self-sufficient and doesn't require knowledge of the usual Java/Kotlin/Scala build tools, i.e. Gradle, Maven or SBT.
 
 If you already have experience with these tools, they are the better options long-term as they will allow integrating Gatling into an already existing tool chain:
 
@@ -174,7 +174,7 @@ GATLING_VERSION is set to '3.6.1'
 Creating jar...done
 ```
 
-This script can also be clicked or double clicked from any file explorer. You'll see the result in the folder `target`, which should now have a file named `artifact.jar`.
+This script can also be clicked or double-clicked from any file explorer. You'll see the result in the folder `target`, which should now have a file named `artifact.jar`.
 
 {{< youtube _fq3giAIibw >}}
 
