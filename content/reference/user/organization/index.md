@@ -3,7 +3,7 @@ title: "Organization"
 description: "Learn how to access organization details."
 date: 2021-08-05T13:13:30+00:00
 lastmod: 2021-08-05T13:13:30+00:00
-weight: 10081
+weight: 21100
 ---
 
 To view information about your organization, click on the **Organization settings** button.

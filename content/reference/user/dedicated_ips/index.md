@@ -4,7 +4,7 @@ description: "Dedicated IP addresses for your pools"
 lead: "Dedicated IP addresses for your pools"
 date: 2021-03-10T14:29:04+00:00
 lastmod: 2021-08-05T13:13:30+00:00
-weight: 10061
+weight: 21070
 ---
 
 Dedicated IPs allow you to have control over the injectors' IP addresses.
