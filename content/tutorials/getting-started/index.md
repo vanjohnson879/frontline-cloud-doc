@@ -61,19 +61,9 @@ In all cases, a user must be part of an organization. Hence, once signed up and 
 
 One last thing, new [organizations]({{< ref "../../reference/user/organization" >}}) are given **free credits** to **launch their first test**.
 
-## Step 2 - Preparing the project {#preparing-project}
+## Step 2 - Prepare the Project {#prepare-project}
 
-{{< alert tip >}}
-If you already know about Gatling and/or you are using a Gradle, Maven or SBT project, you'll need to update the configuration to make it compatible with Gatling Enterprise first:
-
-* [Configuring a Gradle project]({{< ref "../../reference/user/package_gen/#gradle-project" >}})
-* [Configuring a Maven project]({{< ref "../../reference/user/package_gen/#maven-project" >}})
-* [Configuring a SBT project]({{< ref "../../reference/user/package_gen/#sbt-project" >}})
-
-Or, you can download preconfigured sample projects from Gatling Enterprise by clicking on the "Sample simulations" button on the top right in the Simulations page.
-
-Now, you can directly skip to the [generate a package]({{< ref "#generate-package" >}}) section.
-{{< /alert >}}
+#### Using the Bundle {#prepare-project-bundle}
 
 Click [here](https://gatling.io/open-source/#downloadgatling) to download the latest version of the Gatling bundle and extract the archive.
 
@@ -89,8 +79,6 @@ Taken from the [bundle structure documentation](https://gatling.io/docs/gatling/
 {{< alert info >}}
 Inside Gatling, a *test* is called a *simulation*.
 {{< /alert >}}
-
-### Running the test locally
 
 You can test your installation by running your test locally. If Java is properly installed, you can enter the following command in your terminal, or open the `gatling.sh` (if Linux/MacOS) or `gatling.bat` (if Windows) in any file explorer:
 
@@ -162,7 +150,23 @@ You can open the url at the end of the output, which will show a report of the t
 Running a test locally is also a great way to do debugging before sending it to Gatling Enterprise, as running anything inside Gatling Enterprise consumes credits while running a test with Gatling is free.
 {{< /alert >}}
 
-## Step 3 - Generate a package {#generate-package}
+#### Using maven, gradle or sbt {#prepare-project-buildtools}
+
+{{< alert tip >}}
+If you already know about Gatling and/or you are using a Gradle, Maven or SBT project, you'll need to update the configuration to make it compatible with Gatling Enterprise first:
+
+* [Configuring a Gradle project]({{< ref "../../reference/user/package_gen/#gradle-project" >}})
+* [Configuring a Maven project]({{< ref "../../reference/user/package_gen/#maven-project" >}})
+* [Configuring a SBT project]({{< ref "../../reference/user/package_gen/#sbt-project" >}})
+
+Or, you can download preconfigured sample projects from Gatling Enterprise by clicking on the "Sample simulations" button on the top right in the Simulations page.
+
+Now, you can directly skip to the [generate a package]({{< ref "#generate-package" >}}) section.
+{{< /alert >}}
+
+## Step 3 - Generate a Package {#generate-package}
+
+#### Using the Bundle {#generate-package-bundle}
 
 Gatling Enterprise requires a package built from a Gatling project in order to run a test.
 
@@ -179,6 +183,8 @@ This script can also be clicked or double clicked from any file explorer. You'll
 
 {{< youtube _fq3giAIibw >}}
 
+#### Using maven, gradle or sbt {#generate-package-buildtools}
+
 When using other tools, the command to type and the name of the package will differ:
 
 {{< code-toggle console >}}
@@ -188,7 +194,7 @@ maven: mvn gatling:enterprisePackage
 sbt: sbt "Gatling / enterprisePackage"
 {{</ code-toggle >}}
 
-## Step 4 - Upload the package {#upload-package}
+## Step 4 - Upload the Package {#upload-package}
 
 On Gatling Enterprise, click on the [Packages section]({{< ref "../../reference/user/package_conf/" >}}) and on create. Give a name to your package, you can choose to make it available to all teams or to limit access to a specific one, then hit save.
 
@@ -205,7 +211,7 @@ maven: target/${project}-${version}-shaded.jar
 sbt: target/${project}-${version}.jar
 {{</ code-toggle >}}
 
-## Step 5 - Create a simulation {#create-simulation}
+## Step 5 - Create a Simulation {#create-simulation}
 
 To get a grasp of how to run a simulation with Gatling, you will find a ready to use script in the bundle. So let's get started with your first simulation!
 
@@ -235,7 +241,7 @@ If you would like to write your own script as a first test, you can modify the B
 
 That's it, you have created your first simulation on Gatling Enterprise!
 
-## Step 6 - Start load testing! {#start-load-testing}
+## Step 6 - Start Load Testing! {#start-load-testing}
 
 You are now ready to start load testing.
 
@@ -246,7 +252,7 @@ You can now access the report (even during injection phase).
 
 Now that you know how to create and run a simulation on Gatling, we suggest you jump on to the [overview]({{< ref "../../reference/user/overview" >}}) and get the most out of the [reports]({{< ref "../../reference/user/reports" >}}).
 
-## Going further
+## Going Further
 
 ### Learn about load testing concepts
 
