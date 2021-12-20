@@ -1,4 +1,4 @@
-# FrontLine Cloud Documentation
+# Gatling Cloud Documentation
 
 ## Prerequisites:
 
