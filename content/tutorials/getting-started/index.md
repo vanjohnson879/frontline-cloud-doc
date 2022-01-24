@@ -282,8 +282,8 @@ If you've read the article cited in the previous section, you've learned you don
 
 - The [Quickstart tutorial](https://gatling.io/docs/gatling/tutorials/quickstart/) to learn about the Recorder and how to quickly bootstrap a complex scenario and go from there
 - The [Advanced tutorial](https://gatling.io/docs/gatling/tutorials/advanced/) for more advanced crafting
-- For a exhaustive of all you can do with Gatling, the [Cheat-Sheet](https://gatling.io/docs/gatling/reference/current/cheat-sheet/) is your best friend
 - The [Gatling Academy](https://gatling.io/academy/), where you can follow our own training program!
+- For an exhaustive list of all you can do with Gatling, the [Reference documentation](https://gatling.io/docs/gatling/reference/current/) is your best friend
 
 ## Additional resources
 
