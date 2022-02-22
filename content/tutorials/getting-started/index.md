@@ -216,7 +216,7 @@ Your simulation will send the traffic from the region you've selected.
 The three next steps are optional and you can learn more about them [in the dedicated section]({{< ref "../../reference/user/simulations/" >}}), but for now, let's just simply click **Save**.
 
 {{< alert tip >}}
-If you would like to write your own script as a first test, you can modify the BasicSimulation file in the space as shown in the video. If you would like to learn more about creating different types of tests and writing your own scripts check out the [Gatling Academy](https://gatling.io/academy/). Please bear in mind you get 5 credits for free but if your test needs more, it will stop before it should finish.
+If you would like to write your own script as a first test, you can modify the BasicSimulation file in the space as shown in the video. If you would like to learn more about creating different types of tests and writing your own scripts check out the [Gatling Academy](https://gatling.io/academy/). Please bear in mind you get 60 credits for free but if your test needs more, it will stop before it should finish.
 {{< /alert >}}
 
 That's it, you have created your first simulation on Gatling Enterprise!
