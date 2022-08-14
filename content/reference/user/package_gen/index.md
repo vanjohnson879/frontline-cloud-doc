@@ -14,7 +14,7 @@ weight: 21040
 Gatling Enterprise deploys packages containing your compiled Simulations and resources. Those packages have to be generated
 upstream, using one of the methods below, before you can run them with Gatling Enterprise.
 
-Gatling Enterprise is compatible with Gatling 3.3, 3.4, 3.5, 3.6 and 3.7.
+Gatling Enterprise is compatible with Gatling version from 3.3 to 3.8 included.
 
 {{< alert tip >}}
 If you go to the [Simulations page]({{< ref "../simulations" >}}) in the Gatling Enterprise Cloud app, you can click on
@@ -23,37 +23,47 @@ If you go to the [Simulations page]({{< ref "../simulations" >}}) in the Gatling
 
 ### Gatling zip bundle
 
-Once you have created a simulation you want to upload, run the script `enterprisePackage.sh` (on Linux or macOS) or
-`enterprisePackage.bat` (on Windows), found in the `bin` directory of your unzipped Gatling bundle. This will generate a
+Once you have created a simulation you want to upload, run the script `gatling.sh` (on Linux or macOS) or
+`gatling.bat` (on Windows), found in the `bin` directory of your unzipped Gatling bundle and then select choice `3`. This will generate a
 `target/package.jar` file. You can then upload this file in the [Packages section]({{< ref "../package_conf" >}}).
 
 ```shell
-$ ./bin/enterprisePackage.sh
+$ ./bin/gatling.sh
+Do you want to run the simulation locally, on Gatling Enterprise, or just package it?
+Type the number corresponding to your choice and press enter
+[0] <Quit>
+[1] Run the Simulation locally
+[2] Run the Simulation on Gatling Enterprise Cloud
+[3] Package the Simulation for Gatling Enterprise
+
+3
 ```
 
-You can also create a package and upload it in a single command, using the script `enterpriseDeploy.sh` (on Linux or
-macOS) or `enterprisePackage.bat` (on Windows). You must have already [configured a package]({{< ref "../package_conf" >}})
+You can also create a package and upload it in a single command, always using the same script, but selecting choice `2`. You must have already [configured a package]({{< ref "../package_conf" >}})
 (copy the package ID from the Packages table). You also need [an API token]({{< ref "../../admin/api_tokens" >}}) with
 appropriate permissions to upload a package.
 
 Run the script:
 
 ```shell
-$ ./bin/enterpriseDeploy.sh --packageId YOUR_PACKAGE_ID --apiToken YOUR_API_TOKEN
+$ ./bin/gatling.sh --package-id YOUR_PACKAGE_ID --api-token YOUR_API_TOKEN
 ```
 
 Alternatively, the API token can be set with the environment variable `GATLING_ENTERPRISE_API_TOKEN`:
 
 ```shell
 $ export GATLING_ENTERPRISE_API_TOKEN=YOUR_API_TOKEN
-$ ./bin/enterpriseDeploy.sh --packageId YOUR_PACKAGE_ID
+$ ./bin/gatling.sh --package-id YOUR_PACKAGE_ID
+```
+
+Finally, you can get the list of all the available options with the `--help` option:
+
+```shell
+$ ./bin/gatling.sh --help
 ```
 
 {{< alert warning >}}
-These scripts are included in the Gatling bundle version 3.7.0 or later. For older versions, you will need to download
-the `enterprisePackage` and `enterpriseDeploy` script files
-[from the Gatling GitHub repository](https://github.com/gatling/gatling/tree/main/gatling-bundle/src/universal/bin)
-and copy them to the `bin` directory of your unzipped Gatling bundle.
+These commands are only available since Gatling `3.8`. If you're using an older version, you'll have to upgrade.
 {{< /alert >}}
 
 ### Maven, Gradle or SBT project
