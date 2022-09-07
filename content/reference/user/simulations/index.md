@@ -120,7 +120,7 @@ Environment variables can be retrieved in your Gatling simulation with `System.g
 
 ### Step 4: Time window
 
-Configuring a ramp up or ramp down means that the beginning and end of your simulation won't be used for calculating metrics and assertions.
+Configure some ramp up or ramp down time windows to be excluded when computing assertions. This is typically useful when you know that at the beginning of your test run you're going to expected higher response times than when your system is warm (JIT compiler has kicked in, autoscaling has done its work, caches are filled...) and don’t want them to cause your assertions to fail.
 
 {{< img src="create-simulation-timewindow.png" alt="Create simulation - Step 4" >}}
 
