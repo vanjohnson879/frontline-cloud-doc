@@ -77,10 +77,14 @@ In this step, you'll configure the pools used for the Gatling Enterprise injecto
 
 Gatling Enterprise pools are available in the following regions:
 
+- AP Pacific (Mumbai)
+- AP SouthEast (Sydney)
+- Europe (Dublin)
 - Europe (Paris)
+- SA East (São Paulo)
 - US East (N. Virginia)
 - US West (N. California)
-- AP SouthEast (Sydney)
+- US West (Oregon)
 
 In order for the best results from your simulation you should select the injectors that best represent your user base.
 
