@@ -18,7 +18,7 @@ build-gatling-simulation:
   # See https://hub.docker.com/r/sbtscala/scala-sbt for other tags available and for the latest versions
   image: sbtscala/scala-sbt:eclipse-temurin-17.0.5_8_1.8.2_2.13.10
   script:
-    - sbt Gatling/enterpriseStart -Dgatling.enterprise.simulationId=$SIMULATION_ID
+    - sbt Gatling/enterpriseUpload -Dgatling.enterprise.simulationId=$SIMULATION_ID
 
 # Run the simulation on Gatling Enterprise
 run-gatling-enterprise:
