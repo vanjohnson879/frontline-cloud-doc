@@ -131,7 +131,7 @@ For example, you might want to hit `https://example.fr` if the load generator is
 In your simulation code, you can resolve the name of the location in which the load generator running the code is deployed:
 
 ```scala
-val locationName = System.getProperty("gatling.frontline.poolName") // pool is the former name of location
+val locationName = System.getProperty("gatling.enterprise.poolName") // pool is the former name of location
 val baseUrl = if (locationName == "Europe - Paris") "https://example.fr" else "https://example.com"
 ```
 

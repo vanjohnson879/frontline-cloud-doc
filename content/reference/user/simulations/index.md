@@ -126,7 +126,7 @@ You can exclude some system properties from being copied if you prefix them with
 {{< /alert >}}
 
 {{< alert tip >}}
-You can configure the `gatling.frontline.groupedDomains` Java System property to group connection stats from multiple subdomains and avoid memory issues when hitting a very large number of subdomains.
+You can configure the `gatling.enterprise.groupedDomains` Java System property to group connection stats from multiple subdomains and avoid memory issues when hitting a very large number of subdomains.
 
 For example, setting this property as `.foo.com, .bar.com` will consolidate stats for `sub1.foo.com`, `sub2.foo.com`, `sub1.bar.com`, `sub2.bar.com` into `*****.foo.com` and `*****.bar.com`.
 {{< /alert >}}
