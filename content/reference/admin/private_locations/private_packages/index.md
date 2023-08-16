@@ -32,10 +32,11 @@ Before going further, ensure that your AWS S3 bucket is ready to hold your packa
 {{< /alert >}}
 
 {{< alert warning >}}
-Control plane with private repository needs AWS permissions `s3:PutObject`` and `s3:DeleteObject` on the bucket.
+Control plane with private repository needs AWS permissions `s3:PutObject` and `s3:DeleteObject` on the bucket.
 {{< /alert >}}
 
-Once it is done, add the private repository configuration section in your [control plane configuration]({{< ref "../introduction" >}})  file :
+Once it is done, add the private repository configuration section in your [control plane configuration]({{< ref "../introduction" >}}) file:
+
 ```bash
 control-plane {
 	repository {
@@ -60,7 +61,7 @@ This configuration includes the following parameters:
 - **path:** The path of a folder in AWS S3. (optional)
 - **upload.directory**: This directory temporarily stores uploaded JAR files. (optional)
 - **server.port**: The port on which the control plane is listening for private package uploads.
-- **server.bindAddress**: The network interface to bind to. The default is 0.0.0.0, which means all available network IPv4 interfaces.
+- **server.bindAddress**: The network interface to bind to. The default is `0.0.0.0`, which means all available network IPv4 interfaces.
 
 After configuration, restart your control plane to start the server.
 
@@ -73,6 +74,6 @@ You have to use Gatling plugins to create and upload your private packages. See 
 
 You have to set the `controlPlaneUrl` setting to use your control plane for private packages storage with the plugins. See your plugin documentation for details.
 
-Use plugin tasks for creating and updating your private packages :
-* Creation : enterpriseStart
-* Update : enterpriseUpload
+Use plugin tasks for creating and updating your private packages:
+* Creation: enterpriseStart
+* Update: enterpriseUpload
