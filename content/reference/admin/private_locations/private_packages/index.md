@@ -39,19 +39,19 @@ Once it is done, add the private repository configuration section in your [contr
 
 ```bash
 control-plane {
-	repository {
-		# S3 Bucket configuration
-		bucket = "bucket-name"
-		path = "folder/to/upload" # Optional, default to root, do not set trailing slash
-		upload {
-			directory = "/tmp" # Optional, default value /tmp
-		}
-		# Server configuration
-		server {
-			port = 8080 # Optional, default value 8080
-			bindAddress = "0.0.0.0" # Optional, default value 0.0.0.0
-		} 
-	}
+  repository {
+    # S3 Bucket configuration
+    bucket = "bucket-name"
+    path = "folder/to/upload" # Optional, default to root, do not set trailing slash
+    upload {
+      directory = "/tmp" # Optional, default value /tmp
+    }
+    # Server configuration
+    server {
+      port = 8080 # Optional, default value 8080
+      bindAddress = "0.0.0.0" # Optional, default value 0.0.0.0
+    }
+  }
 }
 ```
 
