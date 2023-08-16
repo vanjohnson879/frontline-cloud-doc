@@ -67,7 +67,7 @@ After configuration, restart your control plane to start the server.
 
 ## Usage
 
-You have to use Gatling plugins to create and upload your private packages. See Gatling documentation :
+You have to use Gatling plugins to create and upload your private packages. See Gatling documentation:
 * [Maven plugin](https://gatling.io/docs/gatling/reference/current/extensions/maven_plugin/)
 * [Gradle plugin](https://gatling.io/docs/gatling/reference/current/extensions/gradle_plugin/)
 * [SBT plugin](https://gatling.io/docs/gatling/reference/current/extensions/sbt_plugin/)
