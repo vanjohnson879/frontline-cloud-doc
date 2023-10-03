@@ -56,6 +56,12 @@ control-plane {
           # Disk size in Gb (mininum 20Gb)
           sizeGb = 20
         }
+        # Network configuration
+        network-interface {
+          subnetwork = "my-subnetwork"
+          subnetwork = "my-subnetwork"
+          network = "my-network"
+        }
       }
       # GCP project id as returned by GCP CLI:
       # gcloud projects list
