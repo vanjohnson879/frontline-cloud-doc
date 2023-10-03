@@ -4,7 +4,7 @@ description: "Load Generators on your private GCP account"
 lead: "Private Locations on your GCP account"
 date: 2023-10-02T15:29:00+00:00
 lastmod: 2023-10-02T15:29:00+00:00
-weight: 22053
+weight: 22054
 ---
 
 ## GCP Virtual Machines
