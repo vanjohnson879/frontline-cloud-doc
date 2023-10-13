@@ -67,13 +67,25 @@ After configuration, restart your control plane to start the server.
 
 ## Usage
 
-You have to use Gatling plugins to create and upload your private packages. See Gatling documentation:
-* [Maven plugin](https://gatling.io/docs/gatling/reference/current/extensions/maven_plugin/)
-* [Gradle plugin](https://gatling.io/docs/gatling/reference/current/extensions/gradle_plugin/)
-* [SBT plugin](https://gatling.io/docs/gatling/reference/current/extensions/sbt_plugin/)
+### Creating a Private Package
 
-You have to set the `controlPlaneUrl` setting to use your control plane for private packages storage with the plugins. See your plugin documentation for details.
+To create a private package, you can utilize Gatling Enterprise Cloud's public API. Follow these steps:
 
-Use plugin tasks for creating and updating your private packages:
-* Creation: enterpriseStart
-* Update: enterpriseUpload
+1. Obtain an API Token with "Configure" permission for the relevant team.
+2. Navigate to the Swagger package section for further instructions on creating a private package.
+3. When creating the package, ensure you select a private storage type.
+4. Utilize Gatling plugins to create and upload your private packages. You can refer to the Gatling documentation for specific plugin usage:
+   - [Maven plugin](https://gatling.io/docs/gatling/reference/current/extensions/maven_plugin/)
+   - [Gradle plugin](https://gatling.io/docs/gatling/reference/current/extensions/gradle_plugin/)
+   - [SBT plugin](https://gatling.io/docs/gatling/reference/current/extensions/sbt_plugin/)
+5. For each plugin, you will need to configure it with the following details:
+   - Your API token with "configure" permission for the private package team.
+   - The private package ID.
+   - The control plane repository URL.
+
+### Deleting a Private Package
+
+To delete a private package, delete the package within Gatling Enterprise Cloud.
+The control plane repository will automatically trigger the deletion of the package from the configured repository.
+
+
