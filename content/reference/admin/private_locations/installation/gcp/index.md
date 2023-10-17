@@ -5,7 +5,6 @@ lead: "Run a Control Plane on GCP using Compute Engine, to set up your Private L
 date: 2023-09-03T16:00:00+00:00
 lastmod: 2023-09-03T16:00:00+00:00
 weight: 22053
-draft: true
 ---
 
 GCP [Compute Engine](https://cloud.google.com/compute/docs) is a computing and hosting service that lets you create and run virtual machines on Google infrastructure.
