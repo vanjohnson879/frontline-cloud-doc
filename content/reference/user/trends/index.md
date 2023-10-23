@@ -18,7 +18,7 @@ This view contains the list of your simulation's runs which can be filtered by n
 
 {{< img src="run-table.png" alt="Run table" >}}
 
-As with the results of the latest run in the [simulations table]({{< ref "simulations#simulations-table" >}}), you
+As with the results of the latest run in the [simulations table]({{< ref "../simulations#simulations-table" >}}), you
 can access the [logs]({{< ref "../simulations#logs" >}}) of the run by clicking on the {{< icon terminal >}} icon
 and you can sort the table by each of the columns. The logs are only available for runs which are not flagged as "Successful".
 
